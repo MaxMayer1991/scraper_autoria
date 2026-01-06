@@ -1,0 +1,111 @@
+2026-01-14 22:30:27 [scrapy.utils.log] INFO: Scrapy 2.13.2 started (bot: scraper_autoria)
+2026-01-14 22:30:27 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.13.11 (main, Jan 13 2026, 03:12:43) [GCC 12.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36'}
+2026-01-14 22:30:27 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-01-14 22:30:27 [scrapy.extensions.telnet] INFO: Telnet Password: d43fad45aa7ea5fb
+2026-01-14 22:30:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-01-14 22:30:27 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'scraper_autoria',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/app/logs/spider_20260114_223026.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper_autoria.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper_autoria.spiders']}
+2026-01-14 22:30:28 [twisted] CRITICAL: Unhandled error in Deferred:
+2026-01-14 22:30:28 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/twisted/internet/defer.py", line 1857, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "/usr/local/lib/python3.13/site-packages/scrapy/crawler.py", line 156, in crawl
+    self.engine = self._create_engine()
+                  ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy/crawler.py", line 169, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/usr/local/lib/python3.13/site-packages/scrapy/core/engine.py", line 110, in __init__
+    self.downloader: Downloader = downloader_cls(crawler)
+                                  ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy/core/downloader/__init__.py", line 109, in __init__
+    DownloaderMiddlewareManager.from_crawler(crawler)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy/middleware.py", line 77, in from_crawler
+    return cls._from_settings(crawler.settings, crawler)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy/middleware.py", line 88, in _from_settings
+    mw = build_from_crawler(mwcls, crawler)
+  File "/usr/local/lib/python3.13/site-packages/scrapy/utils/misc.py", line 187, in build_from_crawler
+    instance = objcls.from_crawler(crawler, *args, **kwargs)  # type: ignore[attr-defined]
+  File "/app/scraper_autoria/middlewares.py", line 170, in from_crawler
+    return cls(crawler.settings)
+  File "/app/scraper_autoria/middlewares.py", line 179, in __init__
+    self._get_headers_list()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/app/scraper_autoria/middlewares.py", line 191, in _get_headers_list
+    response = requests.get(self.scrapeops_endpoint, params=urlencode(payload))
+  File "/usr/local/lib/python3.13/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/usr/local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/usr/local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "/usr/local/lib/python3.13/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

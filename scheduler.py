@@ -34,7 +34,7 @@ def run_spider():
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         log_file = f"{LOG_DIR}/spider_{timestamp}.log"
         cmd = [sys.executable, '-m', 'scrapy', 'crawl', 'autoria',
-               '-L','INFO', '-s', '--logfile', log_file]
+               '-s','LOG_LEVEL=INFO', '-s', f'LOG_FILE={log_file}']
         subprocess.run(cmd, check=True, capture_output=True, text=True)
     except Exception as e:
         print(f"❌ Error spider: {e}")

@@ -1,0 +1,1876 @@
+2026-01-14 22:15:28 [scrapy.utils.log] INFO: Scrapy 2.13.2 started (bot: scraper_autoria)
+2026-01-14 22:15:28 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.13.11 (main, Jan 13 2026, 03:12:43) [GCC 12.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36'}
+2026-01-14 22:15:28 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-01-14 22:15:28 [scrapy.extensions.telnet] INFO: Telnet Password: 901833b7ee3d492b
+2026-01-14 22:15:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-01-14 22:15:28 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'scraper_autoria',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/app/logs/spider_20260114_221527.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper_autoria.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper_autoria.spiders']}
+2026-01-14 22:15:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scraper_autoria.middlewares.ProxyMiddleware',
+ 'scraper_autoria.middlewares.ScrapeOpsFakeUserAgentMiddleware',
+ 'scraper_autoria.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper_autoria.middlewares.PlaywrightContextMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-01-14 22:15:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-01-14 22:15:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper_autoria.pipelines.PostgreSQLPipeline']
+2026-01-14 22:15:29 [scrapy.core.engine] INFO: Spider opened
+2026-01-14 22:15:29 [autoria] INFO: ✅ Table cars існує (init.sql відпрацював)
+2026-01-14 22:15:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-01-14 22:15:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-01-14 22:15:29 [scrapy-playwright] INFO: Starting download handler
+2026-01-14 22:15:29 [scrapy-playwright] INFO: Starting download handler
+2026-01-14 22:15:33 [scrapy-playwright] INFO: Launching browser firefox
+2026-01-14 22:15:34 [scrapy-playwright] INFO: Browser firefox launched
+2026-01-14 22:15:46 [autoria] INFO: ✅ Cookie banner closed
+2026-01-14 22:15:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:15:48 [autoria] INFO: ✅ Phone extracted: (067) 950 96 07
+2026-01-14 22:15:48 [autoria] INFO: 📝 Updated [ID:80]: https://auto.ria.com/uk/auto_chevrolet_camaro_39294744.html
+2026-01-14 22:16:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:05 [autoria] INFO: ✅ Phone extracted: (067) 849 10 30
+2026-01-14 22:16:05 [autoria] INFO: 📝 Updated [ID:106]: https://auto.ria.com/uk/auto_renault_master_39227536.html
+2026-01-14 22:16:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:14 [autoria] INFO: ✅ Phone extracted: (098) 719 16 15
+2026-01-14 22:16:14 [autoria] INFO: 📝 Updated [ID:116]: https://auto.ria.com/uk/auto_nissan_qashqai_2_39387150.html
+2026-01-14 22:16:27 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:28 [autoria] INFO: ✅ Phone extracted: (050) 374 05 03
+2026-01-14 22:16:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39285636.html
+2026-01-14 22:16:29 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 7 pages/min), scraped 4 items (at 4 items/min)
+2026-01-14 22:16:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:35 [autoria] INFO: ✅ Phone extracted: (068) 402 00 00
+2026-01-14 22:16:35 [autoria] INFO: 📝 Updated [ID:9]: https://auto.ria.com/uk/auto_bmw_x5_m_38803840.html
+2026-01-14 22:16:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:47 [autoria] INFO: ✅ Phone extracted: (068) 402 00 00
+2026-01-14 22:16:47 [autoria] INFO: 📝 Updated [ID:10]: https://auto.ria.com/uk/auto_bentley_bentayga_38574785.html
+2026-01-14 22:16:56 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:16:57 [autoria] INFO: ✅ Phone extracted: (066) 701 92 89
+2026-01-14 22:16:57 [autoria] INFO: 📝 Updated [ID:44]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39383757.html
+2026-01-14 22:17:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:17:16 [autoria] INFO: ✅ Phone extracted: (067) 679 65 75
+2026-01-14 22:17:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_39137647.html
+2026-01-14 22:17:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:17:25 [autoria] INFO: ✅ Phone extracted: (096) 158 81 13
+2026-01-14 22:17:25 [autoria] INFO: 📝 Updated [ID:50]: https://auto.ria.com/uk/auto_mercedes_benz_g_class_39269056.html
+2026-01-14 22:17:29 [scrapy.extensions.logstats] INFO: Crawled 13 pages (at 6 pages/min), scraped 9 items (at 5 items/min)
+2026-01-14 22:17:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:17:36 [autoria] INFO: ✅ Phone extracted: (066) 114 30 07
+2026-01-14 22:17:37 [autoria] INFO: 📝 Updated [ID:110]: https://auto.ria.com/uk/auto_bmw_5_series_39284872.html
+2026-01-14 22:17:47 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:17:52 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 22:17:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39278993.html
+2026-01-14 22:17:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:17:59 [autoria] INFO: ✅ Phone extracted: (098) 851 34 47
+2026-01-14 22:17:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39386132.html
+2026-01-14 22:18:09 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:18:10 [autoria] INFO: ✅ Phone extracted: (066) 445 77 87
+2026-01-14 22:18:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39386509.html
+2026-01-14 22:18:29 [scrapy.extensions.logstats] INFO: Crawled 19 pages (at 6 pages/min), scraped 13 items (at 4 items/min)
+2026-01-14 22:18:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:18:37 [autoria] INFO: ✅ Phone extracted: (063) 366 99 85
+2026-01-14 22:18:37 [autoria] INFO: 📝 Updated [ID:34]: https://auto.ria.com/uk/auto_kia_stinger_37927649.html
+2026-01-14 22:18:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:18:45 [autoria] INFO: ✅ Phone extracted: (050) 714 00 04
+2026-01-14 22:18:45 [autoria] INFO: 📝 Updated [ID:36]: https://auto.ria.com/uk/auto_skoda_superb_39378352.html
+2026-01-14 22:18:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:18:56 [autoria] INFO: ✅ Phone extracted: (096) 692 59 26
+2026-01-14 22:18:56 [autoria] INFO: 📝 Updated [ID:35]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39381599.html
+2026-01-14 22:19:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:19:06 [autoria] INFO: ✅ Phone extracted: (093) 344 29 00
+2026-01-14 22:19:07 [autoria] INFO: 📝 Updated [ID:57]: https://auto.ria.com/uk/auto_mercedes_benz_e_class_32250336.html
+2026-01-14 22:19:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:19:17 [autoria] INFO: ✅ Phone extracted: (068) 191 32 32
+2026-01-14 22:19:18 [autoria] INFO: 📝 Updated [ID:58]: https://auto.ria.com/uk/auto_audi_e_tron_39375791.html
+2026-01-14 22:19:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:19:26 [autoria] INFO: ✅ Phone extracted: (066) 114 30 07
+2026-01-14 22:19:26 [autoria] INFO: 📝 Updated [ID:111]: https://auto.ria.com/uk/auto_mercedes_benz_s_class_39345685.html
+2026-01-14 22:19:29 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 6 pages/min), scraped 19 items (at 6 items/min)
+2026-01-14 22:19:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:19:45 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 22:19:45 [autoria] INFO: 📝 Updated [ID:114]: https://auto.ria.com/uk/auto_bmw_x5_39282344.html
+2026-01-14 22:19:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:19:54 [autoria] INFO: ✅ Phone extracted: (099) 098 77 77
+2026-01-14 22:19:55 [autoria] INFO: 📝 Updated [ID:63]: https://auto.ria.com/uk/auto_nissan_x_trail_39302722.html
+2026-01-14 22:20:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:03 [autoria] INFO: ✅ Phone extracted: (050) 698 79 07
+2026-01-14 22:20:03 [autoria] INFO: 📝 Updated [ID:64]: https://auto.ria.com/uk/auto_mercedes_benz_gla_class_35101944.html
+2026-01-14 22:20:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:20 [autoria] INFO: ✅ Phone extracted: (068) 888 25 00
+2026-01-14 22:20:20 [autoria] INFO: 📝 Updated [ID:65]: https://auto.ria.com/uk/auto_mercedes_benz_s_class_38704304.html
+2026-01-14 22:20:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:28 [autoria] INFO: ✅ Phone extracted: (098) 154 63 30
+2026-01-14 22:20:28 [autoria] INFO: 📝 Updated [ID:115]: https://auto.ria.com/uk/auto_mercedes_benz_gls_class_38113874.html
+2026-01-14 22:20:29 [scrapy.extensions.logstats] INFO: Crawled 31 pages (at 6 pages/min), scraped 24 items (at 5 items/min)
+2026-01-14 22:20:32 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:33 [autoria] INFO: ✅ Phone extracted: (067) 748 78 62
+2026-01-14 22:20:33 [autoria] INFO: 📝 Updated [ID:67]: https://auto.ria.com/uk/auto_mercedes_benz_s_class_39375330.html
+2026-01-14 22:20:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:49 [autoria] INFO: ✅ Phone extracted: (095) 131 65 38
+2026-01-14 22:20:49 [autoria] INFO: 📝 Updated [ID:72]: https://auto.ria.com/uk/auto_land_rover_range_rover_39375938.html
+2026-01-14 22:20:56 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:20:58 [autoria] INFO: ✅ Phone extracted: (068) 198 03 59
+2026-01-14 22:20:58 [autoria] INFO: 📝 Updated [ID:73]: https://auto.ria.com/uk/auto_skoda_fabia_39051019.html
+2026-01-14 22:21:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:21:10 [autoria] INFO: ✅ Phone extracted: (099) 309 21 86
+2026-01-14 22:21:11 [autoria] INFO: 📝 Updated [ID:75]: https://auto.ria.com/uk/auto_volkswagen_passat_39345787.html
+2026-01-14 22:21:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:21:18 [autoria] INFO: ✅ Phone extracted: (098) 729 90 37
+2026-01-14 22:21:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39386787.html
+2026-01-14 22:21:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:21:29 [scrapy.extensions.logstats] INFO: Crawled 37 pages (at 6 pages/min), scraped 29 items (at 5 items/min)
+2026-01-14 22:21:30 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 22:21:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39013301.html
+2026-01-14 22:21:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:21:42 [autoria] INFO: ✅ Phone extracted: (068) 402 00 00
+2026-01-14 22:21:42 [autoria] INFO: 📝 Updated [ID:76]: https://auto.ria.com/uk/auto_mercedes_benz_amg_gt_38051014.html
+2026-01-14 22:22:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:02 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 22:22:02 [autoria] INFO: 📝 Updated [ID:95]: https://auto.ria.com/uk/auto_bmw_x5_39162591.html
+2026-01-14 22:22:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:11 [autoria] INFO: ✅ Phone extracted: (098) 151 47 21
+2026-01-14 22:22:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gls_class_39294154.html
+2026-01-14 22:22:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:22 [autoria] INFO: ✅ Phone extracted: (097) 944 39 54
+2026-01-14 22:22:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39386150.html
+2026-01-14 22:22:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:29 [scrapy.extensions.logstats] INFO: Crawled 43 pages (at 6 pages/min), scraped 34 items (at 5 items/min)
+2026-01-14 22:22:31 [autoria] INFO: ✅ Phone extracted: (098) 794 03 50
+2026-01-14 22:22:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_sportage_39387360.html
+2026-01-14 22:22:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:43 [autoria] INFO: ✅ Phone extracted: (096) 062 07 33
+2026-01-14 22:22:43 [autoria] INFO: 📝 Updated [ID:83]: https://auto.ria.com/uk/auto_volkswagen_touareg_39268801.html
+2026-01-14 22:22:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:22:51 [autoria] INFO: ✅ Phone extracted: (068) 224 58 35
+2026-01-14 22:22:51 [autoria] INFO: 📝 Updated [ID:86]: https://auto.ria.com/uk/auto_porsche_cayenne_coupe_39009726.html
+2026-01-14 22:23:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:08 [autoria] INFO: ✅ Phone extracted: (096) 982 08 95
+2026-01-14 22:23:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_civic_38877239.html
+2026-01-14 22:23:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:17 [autoria] INFO: ✅ Phone extracted: (093) 716 92 44
+2026-01-14 22:23:17 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_tucson_39380710.html
+2026-01-14 22:23:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:29 [autoria] INFO: ✅ Phone extracted: (093) 230 74 57
+2026-01-14 22:23:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_focus_39385507.html
+2026-01-14 22:23:29 [scrapy.extensions.logstats] INFO: Crawled 49 pages (at 6 pages/min), scraped 40 items (at 6 items/min)
+2026-01-14 22:23:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:35 [autoria] INFO: ✅ Phone extracted: (099) 761 89 81
+2026-01-14 22:23:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_lx_39269600.html
+2026-01-14 22:23:47 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:48 [autoria] INFO: ✅ Phone extracted: (068) 771 11 02
+2026-01-14 22:23:49 [autoria] INFO: 📝 Updated [ID:101]: https://auto.ria.com/uk/auto_audi_q5_39338028.html
+2026-01-14 22:23:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:23:54 [autoria] INFO: ✅ Phone extracted: (050) 318 36 30
+2026-01-14 22:23:54 [autoria] INFO: 📝 Updated [ID:102]: https://auto.ria.com/uk/auto_land_rover_range_rover_sport_39109172.html
+2026-01-14 22:24:09 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:10 [autoria] INFO: ✅ Phone extracted: (066) 953 59 20
+2026-01-14 22:24:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39384422.html
+2026-01-14 22:24:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:19 [autoria] INFO: ✅ Phone extracted: (095) 227 95 36
+2026-01-14 22:24:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_accord_39219653.html
+2026-01-14 22:24:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:29 [autoria] INFO: ✅ Phone extracted: (067) 794 93 48
+2026-01-14 22:24:29 [scrapy.extensions.logstats] INFO: Crawled 56 pages (at 7 pages/min), scraped 45 items (at 5 items/min)
+2026-01-14 22:24:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39325981.html
+2026-01-14 22:24:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:36 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:24:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x7_39333443.html
+2026-01-14 22:24:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:49 [autoria] INFO: ✅ Phone extracted: (073) 100 30 00
+2026-01-14 22:24:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_m_38134622.html
+2026-01-14 22:24:56 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:24:57 [autoria] INFO: ✅ Phone extracted: (050) 999 59 39
+2026-01-14 22:24:57 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_531_70_39277893.html
+2026-01-14 22:25:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:25:12 [autoria] INFO: ✅ Phone extracted: (050) 330 71 88
+2026-01-14 22:25:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_x_39209337.html
+2026-01-14 22:25:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:25:22 [autoria] INFO: ✅ Phone extracted: (063) 995 07 22
+2026-01-14 22:25:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_37734199.html
+2026-01-14 22:25:29 [scrapy.extensions.logstats] INFO: Crawled 63 pages (at 7 pages/min), scraped 51 items (at 6 items/min)
+2026-01-14 22:25:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:25:35 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:25:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gls_class_39315532.html
+2026-01-14 22:25:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:25:49 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:25:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q8_38768030.html
+2026-01-14 22:25:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:25:56 [autoria] INFO: ✅ Phone extracted: (067) 209 22 66
+2026-01-14 22:25:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_man_tga_33595362.html
+2026-01-14 22:26:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:26:14 [autoria] INFO: ✅ Phone extracted: (096) 622 69 40
+2026-01-14 22:26:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_38983217.html
+2026-01-14 22:26:29 [scrapy.extensions.logstats] INFO: Crawled 67 pages (at 4 pages/min), scraped 55 items (at 4 items/min)
+2026-01-14 22:26:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:26:44 [autoria] INFO: ✅ Phone extracted: (068) 284 95 75
+2026-01-14 22:26:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_qashqai_39375788.html
+2026-01-14 22:26:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:26:53 [autoria] INFO: ✅ Phone extracted: (097) 758 26 77
+2026-01-14 22:26:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39376200.html
+2026-01-14 22:27:08 [autoria] ERROR: Error processing https://auto.ria.com/uk/auto_volkswagen_golf_39373690.html: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("div#sellerInfo") to be visible
+
+2026-01-14 22:27:08 [autoria] INFO: HTTP STATUS (error scrape car page): 200
+2026-01-14 22:27:08 [autoria] INFO: HEADERS: <CaseInsensitiveDict: {'Server': 'openresty', 'Date': 'Wed, 14 Jan 2026 21:26:49 GMT', 'Content-Type': 'text/html; charset=utf-8', 'X-Powered-By': 'Express', 'Etag': 'W/"a5ec6-t2taeRZEYbgpjuVAo66//Ap4PBc"', 'X-Envoy-Upstream-Service-Time': '43', 'Set-Cookie': 'ab_redesign=1;Path=/;Max-Age=2592000;Secure;SameSite=None\nab_test_new_pages=1;Path=/;Max-Age=2592000;Secure;SameSite=None', 'X-Custom-Need-To-Redirect-Uk': '0', 'X-Custom-Need-To-Redirect-Ru': '0', 'X-Custom-Is-Ukraine': '0', 'X-Custom-Redirect-Type': '1', 'X-Firefox-Spdy': 'h2', 'Location': ''}>
+2026-01-14 22:27:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:27:16 [autoria] INFO: ✅ Phone extracted: (067) 100 21 24
+2026-01-14 22:27:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39383640.html
+2026-01-14 22:27:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:27:26 [autoria] INFO: ✅ Phone extracted: (067) 115 01 85
+2026-01-14 22:27:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39383656.html
+2026-01-14 22:27:29 [scrapy.extensions.logstats] INFO: Crawled 72 pages (at 5 pages/min), scraped 59 items (at 4 items/min)
+2026-01-14 22:27:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:27:36 [autoria] INFO: ✅ Phone extracted: (095) 336 29 31
+2026-01-14 22:27:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39383711.html
+2026-01-14 22:27:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:27:54 [autoria] INFO: ✅ Phone extracted: (068) 774 75 53
+2026-01-14 22:27:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_zeekr_001_39386034.html
+2026-01-14 22:28:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:28:04 [autoria] INFO: ✅ Phone extracted: (095) 505 00 06
+2026-01-14 22:28:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_rx_39164709.html
+2026-01-14 22:28:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:28:15 [autoria] INFO: ✅ Phone extracted: (073) 590 90 00
+2026-01-14 22:28:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_38385427.html
+2026-01-14 22:28:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:28:27 [autoria] INFO: ✅ Phone extracted: (098) 957 87 61
+2026-01-14 22:28:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_caddy_39387414.html
+2026-01-14 22:28:29 [scrapy.extensions.logstats] INFO: Crawled 78 pages (at 6 pages/min), scraped 64 items (at 5 items/min)
+2026-01-14 22:28:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:28:47 [autoria] INFO: ✅ Phone extracted: (066) 657 12 11
+2026-01-14 22:28:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_accord_39311121.html
+2026-01-14 22:28:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:28:54 [autoria] INFO: ✅ Phone extracted: (099) 116 22 66
+2026-01-14 22:28:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39324710.html
+2026-01-14 22:29:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:13 [autoria] INFO: ✅ Phone extracted: (068) 555 51 15
+2026-01-14 22:29:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_zeekr_001_39369353.html
+2026-01-14 22:29:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:22 [autoria] INFO: ✅ Phone extracted: (067) 505 55 58
+2026-01-14 22:29:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bentley_bentayga_39368405.html
+2026-01-14 22:29:29 [scrapy.extensions.logstats] INFO: Crawled 84 pages (at 6 pages/min), scraped 68 items (at 4 items/min)
+2026-01-14 22:29:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:31 [autoria] INFO: ✅ Phone extracted: (077) 777 19 03
+2026-01-14 22:29:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_39328690.html
+2026-01-14 22:29:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:40 [autoria] INFO: ✅ Phone extracted: (096) 695 21 62
+2026-01-14 22:29:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x7_39076255.html
+2026-01-14 22:29:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:52 [autoria] INFO: ✅ Phone extracted: (097) 946 06 83
+2026-01-14 22:29:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39382088.html
+2026-01-14 22:29:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:29:58 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 22:29:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_niro_39146966.html
+2026-01-14 22:30:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:30:15 [autoria] INFO: ✅ Phone extracted: (099) 010 00 60
+2026-01-14 22:30:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_540_140_39259812.html
+2026-01-14 22:30:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:30:24 [autoria] INFO: ✅ Phone extracted: (067) 489 44 54
+2026-01-14 22:30:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_3_series_39383960.html
+2026-01-14 22:30:29 [scrapy.extensions.logstats] INFO: Crawled 91 pages (at 7 pages/min), scraped 74 items (at 6 items/min)
+2026-01-14 22:30:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:30:34 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 22:30:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc90_39212761.html
+2026-01-14 22:30:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:30:44 [autoria] INFO: ✅ Phone extracted: (066) 953 59 20
+2026-01-14 22:30:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39336192.html
+2026-01-14 22:30:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:30:55 [autoria] INFO: ✅ Phone extracted: (093) 189 01 02
+2026-01-14 22:30:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39233898.html
+2026-01-14 22:31:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:31:06 [autoria] INFO: ✅ Phone extracted: (066) 941 01 88
+2026-01-14 22:31:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39352154.html
+2026-01-14 22:31:29 [scrapy.extensions.logstats] INFO: Crawled 96 pages (at 5 pages/min), scraped 78 items (at 4 items/min)
+2026-01-14 22:31:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:31:32 [autoria] INFO: ✅ Phone extracted: (093) 234 71 63
+2026-01-14 22:31:33 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39331367.html
+2026-01-14 22:31:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:31:40 [autoria] INFO: ✅ Phone extracted: (050) 580 51 67
+2026-01-14 22:31:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x7_39236993.html
+2026-01-14 22:31:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:31:53 [autoria] INFO: ✅ Phone extracted: (067) 100 21 24
+2026-01-14 22:31:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39187320.html
+2026-01-14 22:32:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:03 [autoria] INFO: ✅ Phone extracted: (067) 100 21 24
+2026-01-14 22:32:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39194434.html
+2026-01-14 22:32:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:13 [autoria] INFO: ✅ Phone extracted: (067) 100 21 24
+2026-01-14 22:32:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39285015.html
+2026-01-14 22:32:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:19 [autoria] INFO: ✅ Phone extracted: (067) 100 21 24
+2026-01-14 22:32:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39227968.html
+2026-01-14 22:32:29 [scrapy.extensions.logstats] INFO: Crawled 102 pages (at 6 pages/min), scraped 84 items (at 6 items/min)
+2026-01-14 22:32:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:38 [autoria] INFO: ✅ Phone extracted: (050) 231 09 67
+2026-01-14 22:32:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_3_series_39383120.html
+2026-01-14 22:32:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:48 [autoria] INFO: ✅ Phone extracted: (050) 050 22 21
+2026-01-14 22:32:48 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_39324510.html
+2026-01-14 22:32:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:32:58 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 22:32:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_macan_39294047.html
+2026-01-14 22:33:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:33:10 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 22:33:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_531_70_37566183.html
+2026-01-14 22:33:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:33:19 [autoria] INFO: ✅ Phone extracted: (096) 958 91 38
+2026-01-14 22:33:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_39133716.html
+2026-01-14 22:33:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:33:27 [autoria] INFO: ✅ Phone extracted: (067) 886 91 51
+2026-01-14 22:33:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_palisade_39385789.html
+2026-01-14 22:33:29 [scrapy.extensions.logstats] INFO: Crawled 109 pages (at 7 pages/min), scraped 90 items (at 6 items/min)
+2026-01-14 22:33:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:33:48 [autoria] INFO: ✅ Phone extracted: (098) 656 68 69
+2026-01-14 22:33:48 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_prado_39365205.html
+2026-01-14 22:33:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:33:56 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 22:33:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_js_130_38831028.html
+2026-01-14 22:34:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:04 [autoria] INFO: ✅ Phone extracted: (098) 540 55 00
+2026-01-14 22:34:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_38086700.html
+2026-01-14 22:34:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:16 [autoria] INFO: ✅ Phone extracted: (063) 670 25 77
+2026-01-14 22:34:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_7_series_37541589.html
+2026-01-14 22:34:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:24 [autoria] INFO: ✅ Phone extracted: (067) 314 04 36
+2026-01-14 22:34:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39368531.html
+2026-01-14 22:34:29 [scrapy.extensions.logstats] INFO: Crawled 114 pages (at 5 pages/min), scraped 95 items (at 5 items/min)
+2026-01-14 22:34:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:34 [autoria] INFO: ✅ Phone extracted: (068) 967 18 90
+2026-01-14 22:34:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_38980020.html
+2026-01-14 22:34:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:52 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 22:34:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_38636750.html
+2026-01-14 22:34:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:34:59 [autoria] INFO: ✅ Phone extracted: (075) 478 89 08
+2026-01-14 22:34:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_fluence_39112038.html
+2026-01-14 22:35:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:35:07 [autoria] INFO: ✅ Phone extracted: (067) 441 67 57
+2026-01-14 22:35:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_37327038.html
+2026-01-14 22:35:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:35:19 [autoria] INFO: ✅ Phone extracted: (097) 918 80 82
+2026-01-14 22:35:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_37724513.html
+2026-01-14 22:35:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:35:29 [autoria] INFO: ✅ Phone extracted: (097) 374 37 75
+2026-01-14 22:35:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39061322.html
+2026-01-14 22:35:29 [scrapy.extensions.logstats] INFO: Crawled 121 pages (at 7 pages/min), scraped 101 items (at 6 items/min)
+2026-01-14 22:35:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:35:36 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 22:35:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_js_145_39181163.html
+2026-01-14 22:35:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:35:54 [autoria] INFO: ✅ Phone extracted: (063) 202 81 94
+2026-01-14 22:35:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39193630.html
+2026-01-14 22:36:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:36:02 [autoria] INFO: ✅ Phone extracted: (050) 950 55 53
+2026-01-14 22:36:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_accord_39220469.html
+2026-01-14 22:36:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:36:09 [autoria] INFO: ✅ Phone extracted: (073) 534 30 27
+2026-01-14 22:36:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_gladiator_39341515.html
+2026-01-14 22:36:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:36:17 [autoria] INFO: ✅ Phone extracted: (096) 009 00 32
+2026-01-14 22:36:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_541_70_39382253.html
+2026-01-14 22:36:29 [scrapy.extensions.logstats] INFO: Crawled 128 pages (at 7 pages/min), scraped 106 items (at 5 items/min)
+2026-01-14 22:36:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:36:34 [autoria] INFO: ✅ Phone extracted: (066) 340 16 16
+2026-01-14 22:36:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39383074.html
+2026-01-14 22:36:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:36:40 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 22:36:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_niro_39290625.html
+2026-01-14 22:37:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:03 [autoria] INFO: ✅ Phone extracted: (050) 605 95 24
+2026-01-14 22:37:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_39240352.html
+2026-01-14 22:37:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:15 [autoria] INFO: ✅ Phone extracted: (095) 579 43 06
+2026-01-14 22:37:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_39350610.html
+2026-01-14 22:37:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:26 [autoria] INFO: ✅ Phone extracted: (067) 184 78 45
+2026-01-14 22:37:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39361754.html
+2026-01-14 22:37:29 [scrapy.extensions.logstats] INFO: Crawled 134 pages (at 6 pages/min), scraped 111 items (at 5 items/min)
+2026-01-14 22:37:32 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:37 [autoria] INFO: ✅ Phone extracted: (097) 110 70 70
+2026-01-14 22:37:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_sq7_36666585.html
+2026-01-14 22:37:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:47 [autoria] INFO: ✅ Phone extracted: (067) 767 75 51
+2026-01-14 22:37:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_rivian_r1s_39140338.html
+2026-01-14 22:37:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:37:54 [autoria] INFO: ✅ Phone extracted: (068) 909 05 05
+2026-01-14 22:37:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_tundra_39306029.html
+2026-01-14 22:38:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:38:18 [autoria] INFO: ✅ Phone extracted: (067) 162 30 49
+2026-01-14 22:38:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39068063.html
+2026-01-14 22:38:27 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:38:28 [autoria] INFO: ✅ Phone extracted: (067) 162 30 49
+2026-01-14 22:38:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_38955910.html
+2026-01-14 22:38:29 [scrapy.extensions.logstats] INFO: Crawled 139 pages (at 5 pages/min), scraped 116 items (at 5 items/min)
+2026-01-14 22:38:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:38:38 [autoria] INFO: ✅ Phone extracted: (067) 191 41 91
+2026-01-14 22:38:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_prado_37289940.html
+2026-01-14 22:38:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:38:47 [autoria] INFO: ✅ Phone extracted: (063) 524 59 88
+2026-01-14 22:38:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_39387003.html
+2026-01-14 22:39:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:39:02 [autoria] INFO: ✅ Phone extracted: (068) 088 74 71
+2026-01-14 22:39:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_gt_39303541.html
+2026-01-14 22:39:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:39:11 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:39:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sl_class_39306102.html
+2026-01-14 22:39:29 [scrapy.extensions.logstats] INFO: Crawled 145 pages (at 6 pages/min), scraped 120 items (at 4 items/min)
+2026-01-14 22:39:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:39:32 [autoria] INFO: ✅ Phone extracted: (067) 950 96 07
+2026-01-14 22:39:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_sport_38969032.html
+2026-01-14 22:39:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:39:43 [autoria] INFO: ✅ Phone extracted: (067) 381 43 02
+2026-01-14 22:39:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_38976033.html
+2026-01-14 22:39:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:39:54 [autoria] INFO: ✅ Phone extracted: (097) 077 11 11
+2026-01-14 22:39:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_g_class_39163644.html
+2026-01-14 22:40:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:40:02 [autoria] INFO: ✅ Phone extracted: (097) 110 70 70
+2026-01-14 22:40:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_prado_39035644.html
+2026-01-14 22:40:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:40:16 [autoria] INFO: ✅ Phone extracted: (097) 807 77 00
+2026-01-14 22:40:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x6_39386043.html
+2026-01-14 22:40:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:40:24 [autoria] INFO: ✅ Phone extracted: (093) 143 46 44
+2026-01-14 22:40:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_37601082.html
+2026-01-14 22:40:29 [scrapy.extensions.logstats] INFO: Crawled 151 pages (at 6 pages/min), scraped 126 items (at 6 items/min)
+2026-01-14 22:40:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:40:43 [autoria] INFO: ✅ Phone extracted: (067) 555 00 30
+2026-01-14 22:40:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x2_39288431.html
+2026-01-14 22:40:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:40:51 [autoria] INFO: ✅ Phone extracted: (067) 431 41 89
+2026-01-14 22:40:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39158922.html
+2026-01-14 22:40:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:41:00 [autoria] INFO: ✅ Phone extracted: (067) 431 41 89
+2026-01-14 22:41:00 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39256677.html
+2026-01-14 22:41:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:41:12 [autoria] INFO: ✅ Phone extracted: (067) 431 41 89
+2026-01-14 22:41:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39256651.html
+2026-01-14 22:41:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:41:22 [autoria] INFO: ✅ Phone extracted: (067) 431 41 89
+2026-01-14 22:41:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_38843798.html
+2026-01-14 22:41:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:41:29 [scrapy.extensions.logstats] INFO: Crawled 157 pages (at 6 pages/min), scraped 131 items (at 5 items/min)
+2026-01-14 22:41:30 [autoria] INFO: ✅ Phone extracted: (068) 394 17 67
+2026-01-14 22:41:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39381708.html
+2026-01-14 22:41:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:41:55 [autoria] INFO: ✅ Phone extracted: (050) 239 04 29
+2026-01-14 22:41:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_e_class_39298066.html
+2026-01-14 22:42:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:04 [autoria] INFO: ✅ Phone extracted: (067) 115 01 85
+2026-01-14 22:42:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39362350.html
+2026-01-14 22:42:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:14 [autoria] INFO: ✅ Phone extracted: (093) 663 61 41
+2026-01-14 22:42:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39330122.html
+2026-01-14 22:42:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:23 [autoria] INFO: ✅ Phone extracted: (063) 050 60 50
+2026-01-14 22:42:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_f_150_39335588.html
+2026-01-14 22:42:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:29 [scrapy.extensions.logstats] INFO: Crawled 163 pages (at 6 pages/min), scraped 136 items (at 5 items/min)
+2026-01-14 22:42:32 [autoria] INFO: ✅ Phone extracted: (067) 679 65 75
+2026-01-14 22:42:33 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_evoque_38722680.html
+2026-01-14 22:42:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:39 [autoria] INFO: ✅ Phone extracted: (067) 381 43 02
+2026-01-14 22:42:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39375595.html
+2026-01-14 22:42:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:42:54 [autoria] INFO: ✅ Phone extracted: (067) 253 87 31
+2026-01-14 22:42:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc60_39342610.html
+2026-01-14 22:43:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:05 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:43:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_macan_39099779.html
+2026-01-14 22:43:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:14 [autoria] INFO: ✅ Phone extracted: (093) 120 84 02
+2026-01-14 22:43:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39343907.html
+2026-01-14 22:43:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:23 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 22:43:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39104480.html
+2026-01-14 22:43:29 [scrapy.extensions.logstats] INFO: Crawled 170 pages (at 7 pages/min), scraped 142 items (at 6 items/min)
+2026-01-14 22:43:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:31 [autoria] INFO: ✅ Phone extracted: (067) 312 50 58
+2026-01-14 22:43:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39240205.html
+2026-01-14 22:43:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:39 [autoria] INFO: ✅ Phone extracted: (077) 986 92 53
+2026-01-14 22:43:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q8_39348341.html
+2026-01-14 22:43:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:43:59 [autoria] INFO: ✅ Phone extracted: (098) 105 82 00
+2026-01-14 22:43:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_39294529.html
+2026-01-14 22:44:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:44:07 [autoria] INFO: ✅ Phone extracted: (067) 381 43 02
+2026-01-14 22:44:07 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39209976.html
+2026-01-14 22:44:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:44:16 [autoria] INFO: ✅ Phone extracted: (063) 811 11 11
+2026-01-14 22:44:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_multivan_38899968.html
+2026-01-14 22:44:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:44:26 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 22:44:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q8_e_tron_39179381.html
+2026-01-14 22:44:29 [scrapy.extensions.logstats] INFO: Crawled 177 pages (at 7 pages/min), scraped 148 items (at 6 items/min)
+2026-01-14 22:44:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:44:35 [autoria] INFO: ✅ Phone extracted: (093) 208 89 91
+2026-01-14 22:44:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39317214.html
+2026-01-14 22:44:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:44:42 [autoria] INFO: ✅ Phone extracted: (067) 438 15 91
+2026-01-14 22:44:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39317823.html
+2026-01-14 22:45:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:03 [autoria] INFO: ✅ Phone extracted: (098) 733 37 11
+2026-01-14 22:45:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_sportage_39382933.html
+2026-01-14 22:45:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:15 [autoria] INFO: ✅ Phone extracted: (095) 050 00 05
+2026-01-14 22:45:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_39383255.html
+2026-01-14 22:45:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:26 [autoria] INFO: ✅ Phone extracted: (067) 950 96 07
+2026-01-14 22:45:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_fiat_tipo_39074822.html
+2026-01-14 22:45:29 [scrapy.extensions.logstats] INFO: Crawled 183 pages (at 6 pages/min), scraped 153 items (at 5 items/min)
+2026-01-14 22:45:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:37 [autoria] INFO: ✅ Phone extracted: (063) 993 28 63
+2026-01-14 22:45:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_grand_cherokee_39285144.html
+2026-01-14 22:45:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:47 [autoria] INFO: ✅ Phone extracted: (067) 849 10 30
+2026-01-14 22:45:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_crafter_39089210.html
+2026-01-14 22:45:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:45:53 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 22:45:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jcb_533_105_37817105.html
+2026-01-14 22:46:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:46:12 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 22:46:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_38901363.html
+2026-01-14 22:46:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:46:24 [autoria] INFO: ✅ Phone extracted: (094) 863 19 24
+2026-01-14 22:46:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39267950.html
+2026-01-14 22:46:29 [scrapy.extensions.logstats] INFO: Crawled 189 pages (at 6 pages/min), scraped 158 items (at 5 items/min)
+2026-01-14 22:46:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:46:34 [autoria] INFO: ✅ Phone extracted: (096) 800 28 13
+2026-01-14 22:46:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a5_39374318.html
+2026-01-14 22:46:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:46:44 [autoria] INFO: ✅ Phone extracted: (098) 922 00 00
+2026-01-14 22:46:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_panamera_38706324.html
+2026-01-14 22:46:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:46:59 [autoria] INFO: ✅ Phone extracted: (063) 068 86 05
+2026-01-14 22:46:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_nx_39375329.html
+2026-01-14 22:47:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:47:05 [autoria] INFO: ✅ Phone extracted: (097) 927 58 01
+2026-01-14 22:47:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39376577.html
+2026-01-14 22:47:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:47:24 [autoria] INFO: ✅ Phone extracted: (073) 483 69 15
+2026-01-14 22:47:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39332166.html
+2026-01-14 22:47:29 [scrapy.extensions.logstats] INFO: Crawled 195 pages (at 6 pages/min), scraped 163 items (at 5 items/min)
+2026-01-14 22:47:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:47:32 [autoria] INFO: ✅ Phone extracted: (066) 565 55 74
+2026-01-14 22:47:33 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_id_4_crozz_39141444.html
+2026-01-14 22:47:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:47:47 [autoria] INFO: ✅ Phone extracted: (067) 617 59 80
+2026-01-14 22:47:48 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39225936.html
+2026-01-14 22:47:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:47:55 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 22:47:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39006242.html
+2026-01-14 22:48:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:48:05 [autoria] INFO: ✅ Phone extracted: (068) 768 94 95
+2026-01-14 22:48:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39344031.html
+2026-01-14 22:48:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:48:18 [autoria] INFO: ✅ Phone extracted: (067) 383 03 05
+2026-01-14 22:48:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_38743760.html
+2026-01-14 22:48:29 [scrapy.extensions.logstats] INFO: Crawled 201 pages (at 6 pages/min), scraped 168 items (at 5 items/min)
+2026-01-14 22:48:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:48:35 [autoria] INFO: ✅ Phone extracted: (097) 254 32 42
+2026-01-14 22:48:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39384215.html
+2026-01-14 22:48:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:48:42 [autoria] INFO: ✅ Phone extracted: (098) 259 06 01
+2026-01-14 22:48:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39012073.html
+2026-01-14 22:48:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:48:52 [autoria] INFO: ✅ Phone extracted: (097) 687 93 60
+2026-01-14 22:48:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_taliant_39185872.html
+2026-01-14 22:49:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:49:02 [autoria] INFO: ✅ Phone extracted: (067) 346 08 66
+2026-01-14 22:49:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39386599.html
+2026-01-14 22:49:09 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:49:10 [autoria] INFO: ✅ Phone extracted: (067) 162 30 49
+2026-01-14 22:49:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_39288554.html
+2026-01-14 22:49:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:49:19 [autoria] INFO: ✅ Phone extracted: (099) 779 43 38
+2026-01-14 22:49:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39341712.html
+2026-01-14 22:49:29 [scrapy.extensions.logstats] INFO: Crawled 207 pages (at 6 pages/min), scraped 174 items (at 6 items/min)
+2026-01-14 22:49:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:49:56 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-14 22:49:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:49:59 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-14 22:50:00 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39286109.html
+2026-01-14 22:50:02 [autoria] INFO: ✅ Phone extracted: (098) 629 29 62
+2026-01-14 22:50:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_38183001.html
+2026-01-14 22:50:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:50:12 [autoria] INFO: ✅ Phone extracted: (099) 283 93 04
+2026-01-14 22:50:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_39383062.html
+2026-01-14 22:50:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:50:29 [scrapy.extensions.logstats] INFO: Crawled 211 pages (at 4 pages/min), scraped 177 items (at 3 items/min)
+2026-01-14 22:50:30 [autoria] INFO: ✅ Phone extracted: (066) 930 43 87
+2026-01-14 22:50:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_panamera_39383209.html
+2026-01-14 22:50:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:50:40 [autoria] INFO: ✅ Phone extracted: (077) 136 20 70
+2026-01-14 22:50:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_crafter_39342862.html
+2026-01-14 22:50:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:50:47 [autoria] INFO: ✅ Phone extracted: (063) 230 68 43
+2026-01-14 22:50:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_m_class_39262332.html
+2026-01-14 22:51:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:51:04 [autoria] INFO: ✅ Phone extracted: (097) 195 58 38
+2026-01-14 22:51:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_karoq_39379861.html
+2026-01-14 22:51:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:51:15 [autoria] INFO: ✅ Phone extracted: (097) 988 80 87
+2026-01-14 22:51:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_vito_39024584.html
+2026-01-14 22:51:29 [scrapy.extensions.logstats] INFO: Crawled 216 pages (at 5 pages/min), scraped 182 items (at 5 items/min)
+2026-01-14 22:52:06 [scrapy.core.scraper] ERROR: Error downloading <GET https://auto.ria.com/uk/auto_hyundai_ioniq_5_39380016.html>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/twisted/internet/defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+        cast(Failure, result).throwExceptionIntoGenerator, gen
+    )
+  File "/usr/local/lib/python3.13/site-packages/twisted/python/failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy/core/downloader/middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/twisted/internet/defer.py", line 1257, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+                                        ~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy_playwright/handler.py", line 380, in _download_request
+    return await self._download_request_with_retry(request=request, spider=spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy_playwright/handler.py", line 433, in _download_request_with_retry
+    return await self._download_request_with_page(request, page, spider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy_playwright/handler.py", line 462, in _download_request_with_page
+    response, download = await self._get_response_and_download(request, page, spider)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scrapy_playwright/handler.py", line 564, in _get_response_and_download
+    response = await page.goto(url=request.url, **page_goto_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py", line 9041, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://auto.ria.com/uk/auto_hyundai_ioniq_5_39380016.html", waiting until "load"
+
+2026-01-14 22:52:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:52:25 [autoria] INFO: ✅ Phone extracted: (096) 385 44 62
+2026-01-14 22:52:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_id_6_crozz_39024700.html
+2026-01-14 22:52:29 [scrapy.extensions.logstats] INFO: Crawled 218 pages (at 2 pages/min), scraped 183 items (at 1 items/min)
+2026-01-14 22:52:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:52:35 [autoria] INFO: ✅ Phone extracted: (066) 544 19 41
+2026-01-14 22:52:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39379878.html
+2026-01-14 22:52:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:52:44 [autoria] INFO: ✅ Phone extracted: (067) 536 93 77
+2026-01-14 22:52:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_39380251.html
+2026-01-14 22:53:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:53:11 [autoria] INFO: ✅ Phone extracted: (073) 016 32 66
+2026-01-14 22:53:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_grand_cherokee_39276439.html
+2026-01-14 22:53:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:53:24 [autoria] INFO: ✅ Phone extracted: (063) 889 23 95
+2026-01-14 22:53:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_sq7_39267191.html
+2026-01-14 22:53:29 [scrapy.extensions.logstats] INFO: Crawled 223 pages (at 5 pages/min), scraped 187 items (at 4 items/min)
+2026-01-14 22:53:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:53:35 [autoria] INFO: ✅ Phone extracted: (068) 889 09 98
+2026-01-14 22:53:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_02_8fgf20_39140541.html
+2026-01-14 22:53:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:53:49 [autoria] INFO: ✅ Phone extracted: (068) 365 80 36
+2026-01-14 22:53:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_eqc_39376672.html
+2026-01-14 22:53:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:54:01 [autoria] INFO: ✅ Phone extracted: (096) 651 17 88
+2026-01-14 22:54:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39278272.html
+2026-01-14 22:54:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:54:12 [autoria] INFO: ✅ Phone extracted: (067) 311 77 70
+2026-01-14 22:54:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_velar_32515390.html
+2026-01-14 22:54:29 [scrapy.extensions.logstats] INFO: Crawled 227 pages (at 4 pages/min), scraped 191 items (at 4 items/min)
+2026-01-14 22:54:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:54:43 [autoria] INFO: ✅ Phone extracted: (067) 233 38 33
+2026-01-14 22:54:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39364169.html
+2026-01-14 22:54:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:54:53 [autoria] INFO: ✅ Phone extracted: (099) 131 60 56
+2026-01-14 22:54:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39259730.html
+2026-01-14 22:54:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:55:01 [autoria] INFO: ✅ Phone extracted: (095) 159 67 01
+2026-01-14 22:55:01 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_grand_cherokee_39364317.html
+2026-01-14 22:55:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:55:17 [autoria] INFO: ✅ Phone extracted: (098) 602 96 26
+2026-01-14 22:55:17 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_lx_39260285.html
+2026-01-14 22:55:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:55:24 [autoria] INFO: ✅ Phone extracted: (097) 397 02 74
+2026-01-14 22:55:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39261887.html
+2026-01-14 22:55:29 [scrapy.extensions.logstats] INFO: Crawled 232 pages (at 5 pages/min), scraped 196 items (at 5 items/min)
+2026-01-14 22:55:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:55:37 [autoria] INFO: ✅ Phone extracted: (093) 910 11 17
+2026-01-14 22:55:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_39367086.html
+2026-01-14 22:56:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:56:03 [autoria] INFO: ✅ Phone extracted: (067) 363 33 66
+2026-01-14 22:56:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_ix1_39257313.html
+2026-01-14 22:56:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:56:11 [autoria] INFO: ✅ Phone extracted: (096) 502 23 39
+2026-01-14 22:56:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_37931461.html
+2026-01-14 22:56:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:56:29 [scrapy.extensions.logstats] INFO: Crawled 237 pages (at 5 pages/min), scraped 199 items (at 3 items/min)
+2026-01-14 22:56:29 [autoria] INFO: ✅ Phone extracted: (050) 383 64 83
+2026-01-14 22:56:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a5_39350599.html
+2026-01-14 22:56:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:56:43 [autoria] INFO: ✅ Phone extracted: (097) 309 95 57
+2026-01-14 22:56:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39243695.html
+2026-01-14 22:56:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:56:55 [autoria] INFO: ✅ Phone extracted: (093) 954 32 32
+2026-01-14 22:56:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_byd_sea_lion_06_39351069.html
+2026-01-14 22:57:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:57:03 [autoria] INFO: ✅ Phone extracted: (098) 851 34 47
+2026-01-14 22:57:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39351497.html
+2026-01-14 22:57:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:57:22 [autoria] INFO: ✅ Phone extracted: (096) 956 98 56
+2026-01-14 22:57:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_38480985.html
+2026-01-14 22:57:29 [scrapy.extensions.logstats] INFO: Crawled 243 pages (at 6 pages/min), scraped 204 items (at 5 items/min)
+2026-01-14 22:57:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:57:31 [autoria] INFO: ✅ Phone extracted: (068) 647 29 32
+2026-01-14 22:57:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_seat_alhambra_38518732.html
+2026-01-14 22:57:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:57:41 [autoria] INFO: ✅ Phone extracted: (093) 153 65 51
+2026-01-14 22:57:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gla_class_39090631.html
+2026-01-14 22:57:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:57:54 [autoria] INFO: ✅ Phone extracted: (066) 834 02 75
+2026-01-14 22:57:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_38685151.html
+2026-01-14 22:58:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:58:06 [autoria] INFO: ✅ Phone extracted: (096) 008 16 98
+2026-01-14 22:58:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_coupe_39336336.html
+2026-01-14 22:58:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:58:12 [autoria] INFO: ✅ Phone extracted: (067) 965 96 88
+2026-01-14 22:58:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39337675.html
+2026-01-14 22:58:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:58:29 [scrapy.extensions.logstats] INFO: Crawled 249 pages (at 6 pages/min), scraped 209 items (at 5 items/min)
+2026-01-14 22:58:31 [autoria] INFO: ✅ Phone extracted: (096) 225 03 49
+2026-01-14 22:58:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39186630.html
+2026-01-14 22:58:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:58:42 [autoria] INFO: ✅ Phone extracted: (067) 502 32 52
+2026-01-14 22:58:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_sport_38765627.html
+2026-01-14 22:58:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:58:51 [autoria] INFO: ✅ Phone extracted: (067) 397 98 11
+2026-01-14 22:58:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39311181.html
+2026-01-14 22:59:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:59:03 [autoria] INFO: ✅ Phone extracted: (098) 220 87 03
+2026-01-14 22:59:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39189330.html
+2026-01-14 22:59:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:59:12 [autoria] INFO: ✅ Phone extracted: (068) 619 91 22
+2026-01-14 22:59:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39057157.html
+2026-01-14 22:59:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:59:23 [autoria] INFO: ✅ Phone extracted: (098) 797 10 10
+2026-01-14 22:59:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39192081.html
+2026-01-14 22:59:29 [scrapy.extensions.logstats] INFO: Crawled 255 pages (at 6 pages/min), scraped 215 items (at 6 items/min)
+2026-01-14 22:59:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:59:43 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 22:59:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_b_class_39190348.html
+2026-01-14 22:59:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:59:53 [autoria] INFO: ✅ Phone extracted: (067) 308 87 88
+2026-01-14 22:59:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39384688.html
+2026-01-14 23:00:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:00:02 [autoria] INFO: ✅ Phone extracted: (067) 555 00 51
+2026-01-14 23:00:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_compass_39385702.html
+2026-01-14 23:00:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:00:13 [autoria] INFO: ✅ Phone extracted: (099) 467 15 79
+2026-01-14 23:00:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39386353.html
+2026-01-14 23:00:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:00:23 [autoria] INFO: ✅ Phone extracted: (095) 779 74 00
+2026-01-14 23:00:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39312159.html
+2026-01-14 23:00:29 [scrapy.extensions.logstats] INFO: Crawled 260 pages (at 5 pages/min), scraped 220 items (at 5 items/min)
+2026-01-14 23:00:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:00:35 [autoria] INFO: ✅ Phone extracted: (097) 169 02 18
+2026-01-14 23:00:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_megane_39387253.html
+2026-01-14 23:00:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:00:58 [autoria] INFO: ✅ Phone extracted: (050) 713 19 64
+2026-01-14 23:00:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_v_class_39380075.html
+2026-01-14 23:01:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:01:08 [autoria] INFO: ✅ Phone extracted: (068) 350 72 20
+2026-01-14 23:01:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kavz_685_39076473.html
+2026-01-14 23:01:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:01:17 [autoria] INFO: ✅ Phone extracted: (098) 949 63 02
+2026-01-14 23:01:17 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_kona_electric_39166250.html
+2026-01-14 23:01:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:01:29 [scrapy.extensions.logstats] INFO: Crawled 266 pages (at 6 pages/min), scraped 224 items (at 4 items/min)
+2026-01-14 23:01:30 [autoria] INFO: ✅ Phone extracted: (098) 200 20 40
+2026-01-14 23:01:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_coupe_39278484.html
+2026-01-14 23:01:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:01:40 [autoria] INFO: ✅ Phone extracted: (050) 356 35 69
+2026-01-14 23:01:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39307785.html
+2026-01-14 23:01:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:01:46 [autoria] INFO: ✅ Phone extracted: (093) 056 87 84
+2026-01-14 23:01:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_byd_sea_lion_06_39299332.html
+2026-01-14 23:02:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:02:08 [autoria] INFO: ✅ Phone extracted: (093) 023 01 06
+2026-01-14 23:02:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_3_series_39364994.html
+2026-01-14 23:02:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:02:18 [autoria] INFO: ✅ Phone extracted: (068) 224 58 35
+2026-01-14 23:02:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_maserati_quattroporte_38438021.html
+2026-01-14 23:02:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:02:29 [scrapy.extensions.logstats] INFO: Crawled 272 pages (at 6 pages/min), scraped 229 items (at 5 items/min)
+2026-01-14 23:02:30 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:02:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39365958.html
+2026-01-14 23:02:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:02:40 [autoria] INFO: ✅ Phone extracted: (095) 479 27 04
+2026-01-14 23:02:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_pajero_sport_39366367.html
+2026-01-14 23:02:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:02:53 [autoria] INFO: ✅ Phone extracted: (077) 007 17 00
+2026-01-14 23:02:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39366776.html
+2026-01-14 23:03:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:03:01 [autoria] INFO: ✅ Phone extracted: (098) 330 64 00
+2026-01-14 23:03:01 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_gx_39277192.html
+2026-01-14 23:03:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:03:27 [autoria] INFO: ✅ Phone extracted: (050) 444 13 75
+2026-01-14 23:03:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_peugeot_traveller_39330450.html
+2026-01-14 23:03:29 [scrapy.extensions.logstats] INFO: Crawled 277 pages (at 5 pages/min), scraped 234 items (at 5 items/min)
+2026-01-14 23:03:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:03:37 [autoria] INFO: ✅ Phone extracted: (067) 679 05 85
+2026-01-14 23:03:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_x_37668380.html
+2026-01-14 23:03:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:03:51 [autoria] INFO: ✅ Phone extracted: (096) 530 20 42
+2026-01-14 23:03:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyster_h_39218516.html
+2026-01-14 23:03:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:03:58 [autoria] INFO: ✅ Phone extracted: (067) 685 55 62
+2026-01-14 23:03:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_discovery_38960454.html
+2026-01-14 23:04:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:04:16 [autoria] INFO: ✅ Phone extracted: (096) 970 70 70
+2026-01-14 23:04:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gl_class_38660595.html
+2026-01-14 23:04:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:04:23 [autoria] INFO: ✅ Phone extracted: (050) 419 77 96
+2026-01-14 23:04:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_34134098.html
+2026-01-14 23:04:29 [scrapy.extensions.logstats] INFO: Crawled 283 pages (at 6 pages/min), scraped 239 items (at 5 items/min)
+2026-01-14 23:04:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:04:45 [autoria] INFO: ✅ Phone extracted: (097) 683 21 99
+2026-01-14 23:04:45 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_opel_insignia_39387063.html
+2026-01-14 23:04:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:04:53 [autoria] INFO: ✅ Phone extracted: (097) 754 91 11
+2026-01-14 23:04:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_man_tgx_26_440_38670274.html
+2026-01-14 23:05:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:05:06 [autoria] INFO: ✅ Phone extracted: (066) 957 02 90
+2026-01-14 23:05:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_grand_scenic_39387299.html
+2026-01-14 23:05:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:05:19 [autoria] INFO: ✅ Phone extracted: (067) 266 46 64
+2026-01-14 23:05:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc60_35489963.html
+2026-01-14 23:05:29 [scrapy.extensions.logstats] INFO: Crawled 288 pages (at 5 pages/min), scraped 243 items (at 4 items/min)
+2026-01-14 23:05:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:05:32 [autoria] INFO: ✅ Phone extracted: (097) 987 77 79
+2026-01-14 23:05:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_38067631.html
+2026-01-14 23:05:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:05:38 [autoria] INFO: ✅ Phone extracted: (098) 969 86 10
+2026-01-14 23:05:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_sportback_38944412.html
+2026-01-14 23:06:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:06:11 [autoria] INFO: ✅ Phone extracted: (067) 803 88 88
+2026-01-14 23:06:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_prado_39383183.html
+2026-01-14 23:06:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:06:22 [autoria] INFO: ✅ Phone extracted: (050) 518 54 25
+2026-01-14 23:06:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_megane_e_tech_electric_39165311.html
+2026-01-14 23:06:29 [scrapy.extensions.logstats] INFO: Crawled 293 pages (at 5 pages/min), scraped 247 items (at 4 items/min)
+2026-01-14 23:06:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:06:35 [autoria] INFO: ✅ Phone extracted: (097) 048 01 00
+2026-01-14 23:06:35 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_infiniti_qx70_39156728.html
+2026-01-14 23:06:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:06:41 [autoria] INFO: ✅ Phone extracted: (067) 214 64 61
+2026-01-14 23:06:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_sportage_39289588.html
+2026-01-14 23:07:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:07:01 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 23:07:01 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_vito_39213881.html
+2026-01-14 23:07:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:07:09 [autoria] INFO: ✅ Phone extracted: (096) 345 07 03
+2026-01-14 23:07:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touran_39385678.html
+2026-01-14 23:07:29 [scrapy.extensions.logstats] INFO: Crawled 298 pages (at 5 pages/min), scraped 251 items (at 4 items/min)
+2026-01-14 23:07:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:07:34 [autoria] INFO: ✅ Phone extracted: (095) 336 29 31
+2026-01-14 23:07:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_sport_39373943.html
+2026-01-14 23:07:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:07:45 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:07:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x4_39276492.html
+2026-01-14 23:07:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:07:55 [autoria] INFO: ✅ Phone extracted: (067) 288 34 55
+2026-01-14 23:07:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_superb_38544072.html
+2026-01-14 23:08:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:08:07 [autoria] INFO: ✅ Phone extracted: (096) 843 77 67
+2026-01-14 23:08:07 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_maxima_34742372.html
+2026-01-14 23:08:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:08:16 [autoria] INFO: ✅ Phone extracted: (050) 518 54 25
+2026-01-14 23:08:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_zoe_39283677.html
+2026-01-14 23:08:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:08:27 [autoria] INFO: ✅ Phone extracted: (096) 424 35 52
+2026-01-14 23:08:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_35572023.html
+2026-01-14 23:08:29 [scrapy.extensions.logstats] INFO: Crawled 304 pages (at 6 pages/min), scraped 257 items (at 6 items/min)
+2026-01-14 23:08:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:08:46 [autoria] INFO: ✅ Phone extracted: (095) 521 44 97
+2026-01-14 23:08:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_x_trail_39345555.html
+2026-01-14 23:08:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:08:56 [autoria] INFO: ✅ Phone extracted: (050) 541 28 27
+2026-01-14 23:08:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39347540.html
+2026-01-14 23:09:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:09:09 [autoria] INFO: ✅ Phone extracted: (096) 000 16 55
+2026-01-14 23:09:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_byd_sea_lion_07_39348587.html
+2026-01-14 23:09:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:09:19 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 23:09:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_atlas_39109370.html
+2026-01-14 23:09:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:09:29 [scrapy.extensions.logstats] INFO: Crawled 309 pages (at 5 pages/min), scraped 261 items (at 4 items/min)
+2026-01-14 23:09:30 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:09:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_sportage_39351926.html
+2026-01-14 23:09:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:09:42 [autoria] INFO: ✅ Phone extracted: (096) 613 55 81
+2026-01-14 23:09:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_38944553.html
+2026-01-14 23:10:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:02 [autoria] INFO: ✅ Phone extracted: (067) 787 70 71
+2026-01-14 23:10:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_tt_39184028.html
+2026-01-14 23:10:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:12 [autoria] INFO: ✅ Phone extracted: (066) 657 71 01
+2026-01-14 23:10:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_golf_39307692.html
+2026-01-14 23:10:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:22 [autoria] INFO: ✅ Phone extracted: (050) 823 23 74
+2026-01-14 23:10:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_compass_39318483.html
+2026-01-14 23:10:29 [scrapy.extensions.logstats] INFO: Crawled 315 pages (at 6 pages/min), scraped 266 items (at 5 items/min)
+2026-01-14 23:10:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:33 [autoria] INFO: ✅ Phone extracted: (067) 329 40 95
+2026-01-14 23:10:33 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39197806.html
+2026-01-14 23:10:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:44 [autoria] INFO: ✅ Phone extracted: (067) 308 43 86
+2026-01-14 23:10:45 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_rx_39150966.html
+2026-01-14 23:10:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:10:55 [autoria] INFO: ✅ Phone extracted: (067) 465 67 00
+2026-01-14 23:10:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39326750.html
+2026-01-14 23:11:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:11:15 [autoria] INFO: ✅ Phone extracted: (095) 741 44 78
+2026-01-14 23:11:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_primastar_39372981.html
+2026-01-14 23:11:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:11:24 [autoria] INFO: ✅ Phone extracted: (099) 013 94 33
+2026-01-14 23:11:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jaguar_f_pace_39384999.html
+2026-01-14 23:11:29 [scrapy.extensions.logstats] INFO: Crawled 321 pages (at 6 pages/min), scraped 271 items (at 5 items/min)
+2026-01-14 23:11:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:11:32 [autoria] INFO: ✅ Phone extracted: (095) 688 81 18
+2026-01-14 23:11:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_39364306.html
+2026-01-14 23:11:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:11:45 [autoria] INFO: ✅ Phone extracted: (097) 118 50 20
+2026-01-14 23:11:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39385479.html
+2026-01-14 23:11:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:11:58 [autoria] INFO: ✅ Phone extracted: (097) 430 85 47
+2026-01-14 23:11:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_39385776.html
+2026-01-14 23:12:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:12:06 [autoria] INFO: ✅ Phone extracted: (098) 152 64 19
+2026-01-14 23:12:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_suzuki_vitara_39385893.html
+2026-01-14 23:12:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:12:26 [autoria] INFO: ✅ Phone extracted: (098) 900 53 01
+2026-01-14 23:12:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39274263.html
+2026-01-14 23:12:29 [scrapy.extensions.logstats] INFO: Crawled 327 pages (at 6 pages/min), scraped 276 items (at 5 items/min)
+2026-01-14 23:12:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:12:36 [autoria] INFO: ✅ Phone extracted: (099) 186 15 27
+2026-01-14 23:12:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39382728.html
+2026-01-14 23:12:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:12:47 [autoria] INFO: ✅ Phone extracted: (096) 056 11 00
+2026-01-14 23:12:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_infiniti_qx70_39382739.html
+2026-01-14 23:12:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:12:58 [autoria] INFO: ✅ Phone extracted: (098) 708 19 19
+2026-01-14 23:12:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_sorento_39340437.html
+2026-01-14 23:13:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:13:13 [autoria] INFO: ✅ Phone extracted: (050) 477 73 07
+2026-01-14 23:13:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39383551.html
+2026-01-14 23:13:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:13:20 [autoria] INFO: ✅ Phone extracted: (063) 343 44 88
+2026-01-14 23:13:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_transporter_39375474.html
+2026-01-14 23:13:29 [scrapy.extensions.logstats] INFO: Crawled 332 pages (at 5 pages/min), scraped 281 items (at 5 items/min)
+2026-01-14 23:13:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:13:52 [autoria] INFO: ✅ Phone extracted: (097) 078 74 43
+2026-01-14 23:13:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_daf_xf_106_37951519.html
+2026-01-14 23:14:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:14:05 [autoria] INFO: ✅ Phone extracted: (066) 523 17 19
+2026-01-14 23:14:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jaguar_xf_39380704.html
+2026-01-14 23:14:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:14:13 [autoria] INFO: ✅ Phone extracted: (067) 384 70 43
+2026-01-14 23:14:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_39284552.html
+2026-01-14 23:14:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:14:29 [scrapy.extensions.logstats] INFO: Crawled 336 pages (at 4 pages/min), scraped 284 items (at 3 items/min)
+2026-01-14 23:14:29 [autoria] INFO: ✅ Phone extracted: (099) 384 16 50
+2026-01-14 23:14:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a3_39381516.html
+2026-01-14 23:14:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:14:39 [autoria] INFO: ✅ Phone extracted: (093) 355 05 05
+2026-01-14 23:14:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_fusion_39283575.html
+2026-01-14 23:14:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:14:47 [autoria] INFO: ✅ Phone extracted: (095) 633 94 97
+2026-01-14 23:14:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_golf_39381700.html
+2026-01-14 23:15:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:15:26 [autoria] INFO: ✅ Phone extracted: (066) 389 75 03
+2026-01-14 23:15:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_octavia_38988526.html
+2026-01-14 23:15:29 [scrapy.extensions.logstats] INFO: Crawled 339 pages (at 3 pages/min), scraped 288 items (at 4 items/min)
+2026-01-14 23:15:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:15:43 [autoria] INFO: ✅ Phone extracted: (099) 189 85 77
+2026-01-14 23:15:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_golf_39371874.html
+2026-01-14 23:15:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:15:53 [autoria] INFO: ✅ Phone extracted: (066) 166 17 05
+2026-01-14 23:15:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_murano_39226663.html
+2026-01-14 23:16:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:16:05 [autoria] INFO: ✅ Phone extracted: (097) 693 55 99
+2026-01-14 23:16:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_39374078.html
+2026-01-14 23:16:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:16:19 [autoria] INFO: ✅ Phone extracted: (093) 777 02 22
+2026-01-14 23:16:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_infiniti_fx_37_37822080.html
+2026-01-14 23:16:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:16:29 [scrapy.extensions.logstats] INFO: Crawled 344 pages (at 5 pages/min), scraped 292 items (at 4 items/min)
+2026-01-14 23:16:29 [autoria] INFO: ✅ Phone extracted: (097) 375 82 88
+2026-01-14 23:16:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39278025.html
+2026-01-14 23:16:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:16:41 [autoria] INFO: ✅ Phone extracted: (073) 744 73 93
+2026-01-14 23:16:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_focus_39375415.html
+2026-01-14 23:16:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:16:50 [autoria] INFO: ✅ Phone extracted: (093) 739 73 77
+2026-01-14 23:16:50 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_grand_scenic_39259962.html
+2026-01-14 23:17:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:03 [autoria] INFO: ✅ Phone extracted: (096) 050 04 24
+2026-01-14 23:17:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_daewoo_sens_39376283.html
+2026-01-14 23:17:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:14 [autoria] INFO: ✅ Phone extracted: (067) 888 67 51
+2026-01-14 23:17:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_man_tgx_39109127.html
+2026-01-14 23:17:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:28 [autoria] INFO: ✅ Phone extracted: (068) 335 01 38
+2026-01-14 23:17:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_opel_insignia_39277792.html
+2026-01-14 23:17:29 [scrapy.extensions.logstats] INFO: Crawled 349 pages (at 5 pages/min), scraped 298 items (at 6 items/min)
+2026-01-14 23:17:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:39 [autoria] INFO: ✅ Phone extracted: (093) 000 69 66
+2026-01-14 23:17:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_s4_39376713.html
+2026-01-14 23:17:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:49 [autoria] INFO: ✅ Phone extracted: (073) 817 77 87
+2026-01-14 23:17:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_eqs_39347000.html
+2026-01-14 23:17:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:17:58 [autoria] INFO: ✅ Phone extracted: (067) 005 15 55
+2026-01-14 23:17:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39358735.html
+2026-01-14 23:18:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:18:16 [autoria] INFO: ✅ Phone extracted: (097) 488 20 80
+2026-01-14 23:18:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x6_39135212.html
+2026-01-14 23:18:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:18:22 [autoria] INFO: ✅ Phone extracted: (099) 642 97 29
+2026-01-14 23:18:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_focus_39280850.html
+2026-01-14 23:18:29 [scrapy.extensions.logstats] INFO: Crawled 354 pages (at 5 pages/min), scraped 303 items (at 5 items/min)
+2026-01-14 23:18:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:18:39 [autoria] INFO: ✅ Phone extracted: (096) 011 36 46
+2026-01-14 23:18:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_hr_v_39379318.html
+2026-01-14 23:18:47 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:18:49 [autoria] INFO: ✅ Phone extracted: (067) 369 19 47
+2026-01-14 23:18:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_discovery_sport_39381805.html
+2026-01-14 23:18:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:18:58 [autoria] INFO: ✅ Phone extracted: (098) 505 00 40
+2026-01-14 23:18:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_m_class_39381879.html
+2026-01-14 23:19:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:19:07 [autoria] INFO: ✅ Phone extracted: (077) 229 79 43
+2026-01-14 23:19:07 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_polo_39304433.html
+2026-01-14 23:19:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:19:18 [autoria] INFO: ✅ Phone extracted: (097) 386 51 06
+2026-01-14 23:19:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_crafter_38985955.html
+2026-01-14 23:19:29 [scrapy.extensions.logstats] INFO: Crawled 360 pages (at 6 pages/min), scraped 308 items (at 5 items/min)
+2026-01-14 23:19:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:19:37 [autoria] INFO: ✅ Phone extracted: (095) 505 00 06
+2026-01-14 23:19:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_daewoo_matiz_39373728.html
+2026-01-14 23:19:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:19:44 [autoria] INFO: ✅ Phone extracted: (096) 535 34 87
+2026-01-14 23:19:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_subaru_forester_39340436.html
+2026-01-14 23:19:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:19:56 [autoria] INFO: ✅ Phone extracted: (068) 883 20 20
+2026-01-14 23:19:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_alltrack_38961747.html
+2026-01-14 23:20:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:06 [autoria] INFO: ✅ Phone extracted: (097) 660 44 59
+2026-01-14 23:20:07 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touran_39382325.html
+2026-01-14 23:20:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:12 [autoria] INFO: ✅ Phone extracted: (093) 975 32 95
+2026-01-14 23:20:12 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39382134.html
+2026-01-14 23:20:27 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:28 [autoria] INFO: ✅ Phone extracted: (097) 693 55 99
+2026-01-14 23:20:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a3_39382568.html
+2026-01-14 23:20:29 [scrapy.extensions.logstats] INFO: Crawled 365 pages (at 5 pages/min), scraped 314 items (at 6 items/min)
+2026-01-14 23:20:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:38 [autoria] INFO: ✅ Phone extracted: (067) 726 39 85
+2026-01-14 23:20:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39384007.html
+2026-01-14 23:20:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:47 [autoria] INFO: ✅ Phone extracted: (063) 646 70 73
+2026-01-14 23:20:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_ranger_39384209.html
+2026-01-14 23:20:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:20:53 [autoria] INFO: ✅ Phone extracted: (050) 237 79 02
+2026-01-14 23:20:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39213575.html
+2026-01-14 23:21:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:21:05 [autoria] INFO: ✅ Phone extracted: (050) 103 88 90
+2026-01-14 23:21:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39384713.html
+2026-01-14 23:21:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:21:18 [autoria] INFO: ✅ Phone extracted: (063) 888 99 99
+2026-01-14 23:21:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_39331873.html
+2026-01-14 23:21:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:21:25 [autoria] INFO: ✅ Phone extracted: (096) 836 58 85
+2026-01-14 23:21:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_transporter_39076411.html
+2026-01-14 23:21:29 [scrapy.extensions.logstats] INFO: Crawled 371 pages (at 6 pages/min), scraped 320 items (at 6 items/min)
+2026-01-14 23:21:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:21:44 [autoria] INFO: ✅ Phone extracted: (096) 836 58 85
+2026-01-14 23:21:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_vito_38520850.html
+2026-01-14 23:21:56 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:21:59 [autoria] INFO: ✅ Phone extracted: (096) 836 58 85
+2026-01-14 23:21:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_vito_38634377.html
+2026-01-14 23:22:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:22:09 [autoria] INFO: ✅ Phone extracted: (050) 588 33 88
+2026-01-14 23:22:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_actros_39386073.html
+2026-01-14 23:22:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:22:18 [autoria] INFO: ✅ Phone extracted: (066) 766 66 11
+2026-01-14 23:22:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_crafter_39386405.html
+2026-01-14 23:22:29 [scrapy.extensions.logstats] INFO: Crawled 376 pages (at 5 pages/min), scraped 324 items (at 4 items/min)
+2026-01-14 23:22:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:22:36 [autoria] INFO: ✅ Phone extracted: (066) 908 98 42
+2026-01-14 23:22:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_39386365.html
+2026-01-14 23:22:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:22:50 [autoria] INFO: ✅ Phone extracted: (066) 908 98 42
+2026-01-14 23:22:50 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_renegade_39386601.html
+2026-01-14 23:22:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:00 [autoria] INFO: ✅ Phone extracted: (096) 907 84 57
+2026-01-14 23:23:00 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_superb_39312357.html
+2026-01-14 23:23:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:10 [autoria] INFO: ✅ Phone extracted: (098) 151 30 98
+2026-01-14 23:23:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_logan_39135581.html
+2026-01-14 23:23:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:19 [autoria] INFO: ✅ Phone extracted: (095) 216 19 81
+2026-01-14 23:23:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_golf_39387362.html
+2026-01-14 23:23:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:28 [autoria] INFO: ✅ Phone extracted: (067) 329 40 95
+2026-01-14 23:23:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_37280413.html
+2026-01-14 23:23:29 [scrapy.extensions.logstats] INFO: Crawled 381 pages (at 5 pages/min), scraped 330 items (at 6 items/min)
+2026-01-14 23:23:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:42 [autoria] INFO: ✅ Phone extracted: (093) 028 85 99
+2026-01-14 23:23:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39299512.html
+2026-01-14 23:23:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:23:54 [autoria] INFO: ✅ Phone extracted: (098) 607 62 90
+2026-01-14 23:23:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_38674102.html
+2026-01-14 23:24:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:24:02 [autoria] INFO: ✅ Phone extracted: (063) 811 11 11
+2026-01-14 23:24:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_38025833.html
+2026-01-14 23:24:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:24:19 [autoria] INFO: ✅ Phone extracted: (063) 433 57 52
+2026-01-14 23:24:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_02_8fgf18_36696801.html
+2026-01-14 23:24:29 [scrapy.extensions.logstats] INFO: Crawled 386 pages (at 5 pages/min), scraped 334 items (at 4 items/min)
+2026-01-14 23:24:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:24:31 [autoria] INFO: ✅ Phone extracted: (050) 477 73 07
+2026-01-14 23:24:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_3_series_39204444.html
+2026-01-14 23:24:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:24:39 [autoria] INFO: ✅ Phone extracted: (097) 775 71 71
+2026-01-14 23:24:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_39332555.html
+2026-01-14 23:24:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:24:52 [autoria] INFO: ✅ Phone extracted: (097) 727 99 62
+2026-01-14 23:24:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_38367220.html
+2026-01-14 23:25:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:25:07 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:25:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39334870.html
+2026-01-14 23:25:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:25:24 [autoria] INFO: ✅ Phone extracted: (068) 069 54 82
+2026-01-14 23:25:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_civic_39044156.html
+2026-01-14 23:25:29 [scrapy.extensions.logstats] INFO: Crawled 391 pages (at 5 pages/min), scraped 339 items (at 5 items/min)
+2026-01-14 23:25:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:25:31 [autoria] INFO: ✅ Phone extracted: (063) 433 57 52
+2026-01-14 23:25:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_fbe_38664112.html
+2026-01-14 23:25:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:25:41 [autoria] INFO: ✅ Phone extracted: (063) 433 57 52
+2026-01-14 23:25:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_02_8fdf_37820892.html
+2026-01-14 23:25:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:25:56 [autoria] INFO: ✅ Phone extracted: (063) 265 83 07
+2026-01-14 23:25:57 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39340227.html
+2026-01-14 23:26:09 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:26:10 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:26:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_m_38730551.html
+2026-01-14 23:26:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:26:22 [autoria] INFO: ✅ Phone extracted: (067) 430 25 12
+2026-01-14 23:26:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_edge_39342959.html
+2026-01-14 23:26:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:26:29 [scrapy.extensions.logstats] INFO: Crawled 396 pages (at 5 pages/min), scraped 344 items (at 5 items/min)
+2026-01-14 23:26:30 [autoria] INFO: ✅ Phone extracted: (097) 884 75 60
+2026-01-14 23:26:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_qashqai_39357313.html
+2026-01-14 23:26:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:26:49 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 23:26:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39168832.html
+2026-01-14 23:26:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:26:58 [autoria] INFO: ✅ Phone extracted: (067) 423 79 11
+2026-01-14 23:26:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_39364016.html
+2026-01-14 23:27:09 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:27:10 [autoria] INFO: ✅ Phone extracted: (050) 374 70 70
+2026-01-14 23:27:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_eqc_39364293.html
+2026-01-14 23:27:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:27:19 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 23:27:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39058671.html
+2026-01-14 23:27:29 [scrapy.extensions.logstats] INFO: Crawled 401 pages (at 5 pages/min), scraped 349 items (at 5 items/min)
+2026-01-14 23:27:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:27:32 [autoria] INFO: ✅ Phone extracted: (093) 025 59 97
+2026-01-14 23:27:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_octavia_39368495.html
+2026-01-14 23:27:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:27:40 [autoria] INFO: ✅ Phone extracted: (063) 433 57 52
+2026-01-14 23:27:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_8fgf18_36833110.html
+2026-01-14 23:27:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:27:51 [autoria] INFO: ✅ Phone extracted: (063) 433 57 52
+2026-01-14 23:27:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_8fd30_38403194.html
+2026-01-14 23:28:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:28:02 [autoria] INFO: ✅ Phone extracted: (098) 424 87 70
+2026-01-14 23:28:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_39342326.html
+2026-01-14 23:28:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:28:20 [autoria] INFO: ✅ Phone extracted: (095) 505 00 06
+2026-01-14 23:28:21 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_maxima_39305982.html
+2026-01-14 23:28:27 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:28:29 [scrapy.extensions.logstats] INFO: Crawled 406 pages (at 5 pages/min), scraped 354 items (at 5 items/min)
+2026-01-14 23:28:30 [autoria] INFO: ✅ Phone extracted: (097) 093 39 93
+2026-01-14 23:28:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39282662.html
+2026-01-14 23:28:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:28:40 [autoria] INFO: ✅ Phone extracted: (067) 232 92 22
+2026-01-14 23:28:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_suzuki_vitara_39287036.html
+2026-01-14 23:28:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:28:52 [autoria] INFO: ✅ Phone extracted: (093) 705 94 00
+2026-01-14 23:28:52 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_kona_39328194.html
+2026-01-14 23:29:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:29:08 [autoria] INFO: ✅ Phone extracted: (093) 223 24 14
+2026-01-14 23:29:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_crafter_39284587.html
+2026-01-14 23:29:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:29:20 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-14 23:29:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_s4_39381614.html
+2026-01-14 23:29:29 [scrapy.extensions.logstats] INFO: Crawled 411 pages (at 5 pages/min), scraped 359 items (at 5 items/min)
+2026-01-14 23:29:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:29:31 [autoria] INFO: ✅ Phone extracted: (068) 402 00 00
+2026-01-14 23:29:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_m5_38037030.html
+2026-01-14 23:29:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:29:41 [autoria] INFO: ✅ Phone extracted: (068) 402 00 00
+2026-01-14 23:29:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_venza_38473397.html
+2026-01-14 23:29:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:29:55 [autoria] INFO: ✅ Phone extracted: (066) 313 59 69
+2026-01-14 23:29:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_39285228.html
+2026-01-14 23:30:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:30:04 [autoria] INFO: ✅ Phone extracted: (073) 544 54 54
+2026-01-14 23:30:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_39386085.html
+2026-01-14 23:30:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:30:13 [autoria] INFO: ✅ Phone extracted: (068) 009 90 97
+2026-01-14 23:30:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39386991.html
+2026-01-14 23:30:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:30:29 [scrapy.extensions.logstats] INFO: Crawled 416 pages (at 5 pages/min), scraped 364 items (at 5 items/min)
+2026-01-14 23:30:30 [autoria] INFO: ✅ Phone extracted: (093) 143 81 77
+2026-01-14 23:30:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39288544.html
+2026-01-14 23:30:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:30:42 [autoria] INFO: ✅ Phone extracted: (096) 530 20 42
+2026-01-14 23:30:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_fg_39303801.html
+2026-01-14 23:30:50 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:30:53 [autoria] INFO: ✅ Phone extracted: (093) 252 40 29
+2026-01-14 23:30:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_gx_37618343.html
+2026-01-14 23:31:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:05 [autoria] INFO: ✅ Phone extracted: (095) 612 79 67
+2026-01-14 23:31:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39189787.html
+2026-01-14 23:31:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:16 [autoria] INFO: ✅ Phone extracted: (095) 857 65 60
+2026-01-14 23:31:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_arteon_39203967.html
+2026-01-14 23:31:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:25 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 23:31:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_38644737.html
+2026-01-14 23:31:29 [scrapy.extensions.logstats] INFO: Crawled 421 pages (at 5 pages/min), scraped 370 items (at 6 items/min)
+2026-01-14 23:31:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:37 [autoria] INFO: ✅ Phone extracted: (067) 363 33 66
+2026-01-14 23:31:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_ez_60_39315959.html
+2026-01-14 23:31:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:42 [autoria] INFO: ✅ Phone extracted: (096) 530 20 42
+2026-01-14 23:31:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_sumitomo_fg_38304756.html
+2026-01-14 23:31:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:31:57 [autoria] INFO: ✅ Phone extracted: (050) 688 76 18
+2026-01-14 23:31:57 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39108268.html
+2026-01-14 23:32:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:32:06 [autoria] INFO: ✅ Phone extracted: (067) 827 36 92
+2026-01-14 23:32:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_byd_song_plus_39321517.html
+2026-01-14 23:32:11 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:32:25 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-14 23:32:28 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-14 23:32:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_02_8fgf30_39071641.html
+2026-01-14 23:32:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:32:29 [scrapy.extensions.logstats] INFO: Crawled 427 pages (at 6 pages/min), scraped 375 items (at 5 items/min)
+2026-01-14 23:32:30 [autoria] INFO: ✅ Phone extracted: (098) 011 69 54
+2026-01-14 23:32:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_evito_39328051.html
+2026-01-14 23:32:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:32:40 [autoria] INFO: ✅ Phone extracted: (093) 784 50 17
+2026-01-14 23:32:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_38923712.html
+2026-01-14 23:32:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:32:50 [autoria] INFO: ✅ Phone extracted: (068) 938 16 99
+2026-01-14 23:32:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_daewoo_sens_39349068.html
+2026-01-14 23:33:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:02 [autoria] INFO: ✅ Phone extracted: (068) 562 38 81
+2026-01-14 23:33:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_macan_39349419.html
+2026-01-14 23:33:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:10 [autoria] INFO: ✅ Phone extracted: (096) 249 36 95
+2026-01-14 23:33:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39270242.html
+2026-01-14 23:33:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:24 [autoria] INFO: ✅ Phone extracted: (068) 562 38 81
+2026-01-14 23:33:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_38979494.html
+2026-01-14 23:33:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:29 [scrapy.extensions.logstats] INFO: Crawled 433 pages (at 6 pages/min), scraped 381 items (at 6 items/min)
+2026-01-14 23:33:30 [autoria] INFO: ✅ Phone extracted: (097) 046 43 34
+2026-01-14 23:33:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_zeekr_001_39064429.html
+2026-01-14 23:33:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:44 [autoria] INFO: ✅ Phone extracted: (096) 426 25 07
+2026-01-14 23:33:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_escape_39356581.html
+2026-01-14 23:33:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:33:55 [autoria] INFO: ✅ Phone extracted: (096) 484 90 91
+2026-01-14 23:33:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x2_39126362.html
+2026-01-14 23:34:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:01 [autoria] INFO: ✅ Phone extracted: (068) 424 64 84
+2026-01-14 23:34:01 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_transporter_39358999.html
+2026-01-14 23:34:15 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:17 [autoria] INFO: ✅ Phone extracted: (096) 530 20 42
+2026-01-14 23:34:17 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_yale_glp_gdp_39243475.html
+2026-01-14 23:34:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:26 [autoria] INFO: ✅ Phone extracted: (095) 642 49 55
+2026-01-14 23:34:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_39361188.html
+2026-01-14 23:34:29 [scrapy.extensions.logstats] INFO: Crawled 439 pages (at 6 pages/min), scraped 387 items (at 6 items/min)
+2026-01-14 23:34:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:37 [autoria] INFO: ✅ Phone extracted: (099) 683 90 21
+2026-01-14 23:34:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jeep_grand_cherokee_38343196.html
+2026-01-14 23:34:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:47 [autoria] INFO: ✅ Phone extracted: (097) 608 88 46
+2026-01-14 23:34:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_39334775.html
+2026-01-14 23:34:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:34:53 [autoria] INFO: ✅ Phone extracted: (095) 855 34 15
+2026-01-14 23:34:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_37950493.html
+2026-01-14 23:35:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:35:07 [autoria] INFO: ✅ Phone extracted: (096) 530 20 42
+2026-01-14 23:35:07 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_yale_glp_gdp_39369988.html
+2026-01-14 23:35:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:35:20 [autoria] INFO: ✅ Phone extracted: (095) 329 16 07
+2026-01-14 23:35:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_lx_38839957.html
+2026-01-14 23:35:29 [scrapy.extensions.logstats] INFO: Crawled 444 pages (at 5 pages/min), scraped 392 items (at 5 items/min)
+2026-01-14 23:35:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:35:34 [autoria] INFO: ✅ Phone extracted: (098) 424 87 70
+2026-01-14 23:35:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_38967045.html
+2026-01-14 23:35:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:35:45 [autoria] INFO: ✅ Phone extracted: (050) 611 11 56
+2026-01-14 23:35:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39305493.html
+2026-01-14 23:35:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:35:54 [autoria] INFO: ✅ Phone extracted: (066) 632 18 76
+2026-01-14 23:35:54 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_6_39237289.html
+2026-01-14 23:36:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:36:09 [autoria] INFO: ✅ Phone extracted: (067) 618 51 80
+2026-01-14 23:36:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_39076781.html
+2026-01-14 23:36:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:36:21 [autoria] INFO: ✅ Phone extracted: (073) 520 00 10
+2026-01-14 23:36:21 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x4_39329857.html
+2026-01-14 23:36:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:36:29 [autoria] INFO: ✅ Phone extracted: (097) 932 61 23
+2026-01-14 23:36:29 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_jaguar_xf_39382338.html
+2026-01-14 23:36:29 [scrapy.extensions.logstats] INFO: Crawled 449 pages (at 5 pages/min), scraped 398 items (at 6 items/min)
+2026-01-14 23:36:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:36:39 [autoria] INFO: ✅ Phone extracted: (067) 312 49 93
+2026-01-14 23:36:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_38118090.html
+2026-01-14 23:36:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:36:58 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:36:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_e_golf_39177211.html
+2026-01-14 23:37:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:37:09 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:37:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_leaf_39310042.html
+2026-01-14 23:37:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:37:17 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:37:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_opel_ampera_e_39360334.html
+2026-01-14 23:37:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:37:24 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:37:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_39340448.html
+2026-01-14 23:37:29 [scrapy.extensions.logstats] INFO: Crawled 454 pages (at 5 pages/min), scraped 403 items (at 5 items/min)
+2026-01-14 23:37:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:37:36 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:37:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_octavia_39277538.html
+2026-01-14 23:38:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:38:03 [autoria] INFO: ✅ Phone extracted: (098) 729 25 57
+2026-01-14 23:38:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_soul_39360395.html
+2026-01-14 23:38:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:38:25 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-14 23:38:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:38:27 [autoria] INFO: ✅ Phone extracted: (050) 375 20 30
+2026-01-14 23:38:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_39184818.html
+2026-01-14 23:38:28 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-14 23:38:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_venza_36380878.html
+2026-01-14 23:38:29 [scrapy.extensions.logstats] INFO: Crawled 458 pages (at 4 pages/min), scraped 407 items (at 4 items/min)
+2026-01-14 23:38:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:38:54 [autoria] INFO: ✅ Phone extracted: (067) 218 67 76
+2026-01-14 23:38:55 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_3_series_38692074.html
+2026-01-14 23:39:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:39:05 [autoria] INFO: ✅ Phone extracted: (073) 993 39 73
+2026-01-14 23:39:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_sport_39299677.html
+2026-01-14 23:39:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:39:21 [autoria] INFO: ✅ Phone extracted: (077) 770 81 81
+2026-01-14 23:39:21 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_9_38902651.html
+2026-01-14 23:39:29 [scrapy.extensions.logstats] INFO: Crawled 461 pages (at 3 pages/min), scraped 410 items (at 3 items/min)
+2026-01-14 23:39:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:39:40 [autoria] INFO: ✅ Phone extracted: (050) 875 92 64
+2026-01-14 23:39:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_m_class_39308784.html
+2026-01-14 23:40:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:40:07 [autoria] INFO: ✅ Phone extracted: (066) 106 44 39
+2026-01-14 23:40:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc90_37899552.html
+2026-01-14 23:40:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:40:27 [autoria] INFO: ✅ Phone extracted: (067) 483 90 24
+2026-01-14 23:40:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_chevrolet_blazer_39315036.html
+2026-01-14 23:40:29 [scrapy.extensions.logstats] INFO: Crawled 464 pages (at 3 pages/min), scraped 413 items (at 3 items/min)
+2026-01-14 23:40:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:40:39 [autoria] INFO: ✅ Phone extracted: (073) 156 57 09
+2026-01-14 23:40:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_39196729.html
+2026-01-14 23:40:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:40:58 [autoria] INFO: ✅ Phone extracted: (067) 540 11 99
+2026-01-14 23:40:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_sequoia_38925769.html
+2026-01-14 23:41:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:41:21 [autoria] INFO: ✅ Phone extracted: (093) 572 38 80
+2026-01-14 23:41:21 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39201562.html
+2026-01-14 23:41:29 [scrapy.extensions.logstats] INFO: Crawled 467 pages (at 3 pages/min), scraped 416 items (at 3 items/min)
+2026-01-14 23:41:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:41:45 [autoria] INFO: ✅ Phone extracted: (097) 611 10 64
+2026-01-14 23:41:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_e_class_39201983.html
+2026-01-14 23:42:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:42:02 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 23:42:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_haulotte_h_35614424.html
+2026-01-14 23:42:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:42:25 [autoria] INFO: ✅ Phone extracted: (067) 321 15 82
+2026-01-14 23:42:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_39327143.html
+2026-01-14 23:42:29 [scrapy.extensions.logstats] INFO: Crawled 470 pages (at 3 pages/min), scraped 419 items (at 3 items/min)
+2026-01-14 23:42:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:42:39 [autoria] INFO: ✅ Phone extracted: (075) 102 40 12
+2026-01-14 23:42:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_38938695.html
+2026-01-14 23:43:00 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:43:06 [autoria] INFO: ✅ Phone extracted: (050) 953 97 06
+2026-01-14 23:43:08 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_venza_39210798.html
+2026-01-14 23:43:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:43:25 [autoria] INFO: ✅ Phone extracted: (067) 197 18 61
+2026-01-14 23:43:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39329173.html
+2026-01-14 23:43:29 [scrapy.extensions.logstats] INFO: Crawled 473 pages (at 3 pages/min), scraped 422 items (at 3 items/min)
+2026-01-14 23:43:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:43:37 [autoria] INFO: ✅ Phone extracted: (067) 973 56 42
+2026-01-14 23:43:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x3_39329976.html
+2026-01-14 23:43:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:43:57 [autoria] INFO: ✅ Phone extracted: (097) 756 33 50
+2026-01-14 23:43:57 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_rx_38948848.html
+2026-01-14 23:44:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:44:09 [autoria] INFO: ✅ Phone extracted: (068) 050 99 50
+2026-01-14 23:44:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_e_class_38798434.html
+2026-01-14 23:44:29 [scrapy.extensions.logstats] INFO: Crawled 477 pages (at 4 pages/min), scraped 425 items (at 3 items/min)
+2026-01-14 23:44:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:44:39 [autoria] INFO: ✅ Phone extracted: (067) 464 66 32
+2026-01-14 23:44:39 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39338444.html
+2026-01-14 23:44:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:44:56 [autoria] INFO: ✅ Phone extracted: (098) 079 10 37
+2026-01-14 23:44:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_tucson_35926129.html
+2026-01-14 23:45:07 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:45:09 [autoria] INFO: ✅ Phone extracted: (093) 370 40 04
+2026-01-14 23:45:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39339018.html
+2026-01-14 23:45:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:45:29 [scrapy.extensions.logstats] INFO: Crawled 480 pages (at 3 pages/min), scraped 428 items (at 3 items/min)
+2026-01-14 23:45:30 [autoria] INFO: ✅ Phone extracted: (096) 031 95 08
+2026-01-14 23:45:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_tiguan_37333102.html
+2026-01-14 23:45:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:45:45 [autoria] INFO: ✅ Phone extracted: (098) 885 55 59
+2026-01-14 23:45:45 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_caterpillar_303_38194813.html
+2026-01-14 23:46:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:46:15 [autoria] INFO: ✅ Phone extracted: (063) 933 80 16
+2026-01-14 23:46:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_cla_class_37953665.html
+2026-01-14 23:46:29 [scrapy.extensions.logstats] INFO: Crawled 483 pages (at 3 pages/min), scraped 431 items (at 3 items/min)
+2026-01-14 23:46:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:46:38 [autoria] INFO: ✅ Phone extracted: (093) 748 74 72
+2026-01-14 23:46:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_39344968.html
+2026-01-14 23:46:51 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:46:52 [autoria] INFO: ✅ Phone extracted: (050) 552 59 59
+2026-01-14 23:46:53 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_es_39344637.html
+2026-01-14 23:47:05 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:47:17 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-14 23:47:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:47:19 [autoria] INFO: ✅ Phone extracted: (066) 720 65 30
+2026-01-14 23:47:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39346604.html
+2026-01-14 23:47:20 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-14 23:47:21 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_36726690.html
+2026-01-14 23:47:29 [scrapy.extensions.logstats] INFO: Crawled 486 pages (at 3 pages/min), scraped 435 items (at 4 items/min)
+2026-01-14 23:47:43 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:47:44 [autoria] INFO: ✅ Phone extracted: (098) 840 86 11
+2026-01-14 23:47:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_niro_38546454.html
+2026-01-14 23:48:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:48:09 [autoria] INFO: ✅ Phone extracted: (097) 359 01 45
+2026-01-14 23:48:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39240775.html
+2026-01-14 23:48:27 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:48:28 [autoria] INFO: ✅ Phone extracted: (097) 264 22 94
+2026-01-14 23:48:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q8_39347708.html
+2026-01-14 23:48:29 [scrapy.extensions.logstats] INFO: Crawled 489 pages (at 3 pages/min), scraped 438 items (at 3 items/min)
+2026-01-14 23:48:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:48:43 [autoria] INFO: ✅ Phone extracted: (096) 947 48 25
+2026-01-14 23:48:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39352184.html
+2026-01-14 23:48:56 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:49:02 [autoria] INFO: ✅ Phone extracted: (099) 302 47 05
+2026-01-14 23:49:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_ford_mustang_mach_e_39352763.html
+2026-01-14 23:49:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:49:20 [autoria] INFO: ✅ Phone extracted: (066) 720 65 30
+2026-01-14 23:49:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39353638.html
+2026-01-14 23:49:29 [scrapy.extensions.logstats] INFO: Crawled 493 pages (at 4 pages/min), scraped 441 items (at 3 items/min)
+2026-01-14 23:49:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:49:34 [autoria] INFO: ✅ Phone extracted: (067) 363 33 66
+2026-01-14 23:49:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_byd_leopard_3_39354023.html
+2026-01-14 23:49:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:49:50 [autoria] INFO: ✅ Phone extracted: (093) 137 52 93
+2026-01-14 23:49:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_v_class_39124264.html
+2026-01-14 23:50:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:50:10 [autoria] INFO: ✅ Phone extracted: (099) 300 10 86
+2026-01-14 23:50:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_39357702.html
+2026-01-14 23:50:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:50:23 [autoria] INFO: ✅ Phone extracted: (066) 720 65 30
+2026-01-14 23:50:23 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39357802.html
+2026-01-14 23:50:29 [scrapy.extensions.logstats] INFO: Crawled 496 pages (at 3 pages/min), scraped 445 items (at 4 items/min)
+2026-01-14 23:50:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:50:42 [autoria] INFO: ✅ Phone extracted: (067) 508 10 38
+2026-01-14 23:50:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_discovery_38620110.html
+2026-01-14 23:51:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:51:09 [autoria] INFO: ✅ Phone extracted: (068) 288 79 49
+2026-01-14 23:51:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_tucson_39360008.html
+2026-01-14 23:51:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:51:26 [autoria] INFO: ✅ Phone extracted: (066) 720 65 30
+2026-01-14 23:51:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_master_39256247.html
+2026-01-14 23:51:29 [scrapy.extensions.logstats] INFO: Crawled 499 pages (at 3 pages/min), scraped 448 items (at 3 items/min)
+2026-01-14 23:51:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:51:47 [autoria] INFO: ✅ Phone extracted: (050) 203 33 97
+2026-01-14 23:51:47 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_37812346.html
+2026-01-14 23:51:57 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:51:59 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-14 23:51:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39011079.html
+2026-01-14 23:52:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:52:14 [autoria] INFO: ✅ Phone extracted: (098) 461 90 00
+2026-01-14 23:52:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_38704084.html
+2026-01-14 23:52:29 [scrapy.extensions.logstats] INFO: Crawled 502 pages (at 3 pages/min), scraped 451 items (at 3 items/min)
+2026-01-14 23:52:37 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:52:40 [autoria] INFO: ✅ Phone extracted: (050) 331 98 50
+2026-01-14 23:52:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_s_class_38008264.html
+2026-01-14 23:52:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:53:00 [autoria] INFO: ✅ Phone extracted: (067) 277 03 03
+2026-01-14 23:53:00 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_gle_class_39294272.html
+2026-01-14 23:53:20 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:53:21 [autoria] INFO: ✅ Phone extracted: (067) 967 89 66
+2026-01-14 23:53:22 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_fiat_doblo_39369588.html
+2026-01-14 23:53:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:53:29 [scrapy.extensions.logstats] INFO: Crawled 506 pages (at 4 pages/min), scraped 454 items (at 3 items/min)
+2026-01-14 23:53:30 [autoria] INFO: ✅ Phone extracted: (073) 101 42 92
+2026-01-14 23:53:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39371117.html
+2026-01-14 23:53:45 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:53:46 [autoria] INFO: ✅ Phone extracted: (099) 296 97 92
+2026-01-14 23:53:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39258513.html
+2026-01-14 23:54:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:54:02 [autoria] INFO: ✅ Phone extracted: (068) 856 34 04
+2026-01-14 23:54:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_38525266.html
+2026-01-14 23:54:19 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:54:24 [autoria] INFO: ✅ Phone extracted: (093) 146 70 07
+2026-01-14 23:54:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_39046491.html
+2026-01-14 23:54:29 [scrapy.extensions.logstats] INFO: Crawled 509 pages (at 3 pages/min), scraped 458 items (at 4 items/min)
+2026-01-14 23:54:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:54:40 [autoria] INFO: ✅ Phone extracted: (097) 369 09 81
+2026-01-14 23:54:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_atlas_39325360.html
+2026-01-14 23:54:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:54:49 [autoria] INFO: ✅ Phone extracted: (093) 600 96 00
+2026-01-14 23:54:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_macan_39147579.html
+2026-01-14 23:55:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:55:02 [autoria] INFO: ✅ Phone extracted: (093) 954 32 32
+2026-01-14 23:55:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc90_39373416.html
+2026-01-14 23:55:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:55:26 [autoria] INFO: ✅ Phone extracted: (097) 339 68 15
+2026-01-14 23:55:27 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_39262257.html
+2026-01-14 23:55:29 [scrapy.extensions.logstats] INFO: Crawled 513 pages (at 4 pages/min), scraped 462 items (at 4 items/min)
+2026-01-14 23:55:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:55:43 [autoria] INFO: ✅ Phone extracted: (067) 770 17 10
+2026-01-14 23:55:43 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_37514523.html
+2026-01-14 23:55:53 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:56:06 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-14 23:56:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:56:09 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-14 23:56:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_36798406.html
+2026-01-14 23:56:09 [autoria] INFO: ✅ Phone extracted: (063) 585 45 15
+2026-01-14 23:56:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_lexus_lx_39251940.html
+2026-01-14 23:56:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:56:25 [autoria] INFO: ✅ Phone extracted: (066) 692 96 09
+2026-01-14 23:56:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_glb_class_38844191.html
+2026-01-14 23:56:29 [scrapy.extensions.logstats] INFO: Crawled 517 pages (at 4 pages/min), scraped 466 items (at 4 items/min)
+2026-01-14 23:56:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:56:42 [autoria] INFO: ✅ Phone extracted: (068) 778 73 71
+2026-01-14 23:56:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mazda_cx_5_39079387.html
+2026-01-14 23:57:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:57:03 [autoria] INFO: ✅ Phone extracted: (050) 662 02 38
+2026-01-14 23:57:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_acura_tlx_37163155.html
+2026-01-14 23:57:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:57:29 [scrapy.extensions.logstats] INFO: Crawled 520 pages (at 3 pages/min), scraped 468 items (at 2 items/min)
+2026-01-14 23:57:29 [autoria] INFO: ✅ Phone extracted: (098) 206 52 72
+2026-01-14 23:57:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_38925674.html
+2026-01-14 23:57:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:57:49 [autoria] INFO: ✅ Phone extracted: (097) 356 58 34
+2026-01-14 23:57:50 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_honda_accord_39377246.html
+2026-01-14 23:57:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:58:05 [autoria] INFO: ✅ Phone extracted: (097) 166 41 19
+2026-01-14 23:58:05 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39305556.html
+2026-01-14 23:58:26 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:58:28 [autoria] INFO: ✅ Phone extracted: (096) 395 18 08
+2026-01-14 23:58:28 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a5_sportback_39377428.html
+2026-01-14 23:58:29 [scrapy.extensions.logstats] INFO: Crawled 523 pages (at 3 pages/min), scraped 472 items (at 4 items/min)
+2026-01-14 23:58:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:58:45 [autoria] INFO: ✅ Phone extracted: (050) 902 92 92
+2026-01-14 23:58:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_39249198.html
+2026-01-14 23:58:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:59:00 [autoria] INFO: ✅ Phone extracted: (050) 714 00 04
+2026-01-14 23:59:01 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_passat_39378292.html
+2026-01-14 23:59:29 [scrapy.extensions.logstats] INFO: Crawled 526 pages (at 3 pages/min), scraped 474 items (at 2 items/min)
+2026-01-14 23:59:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:59:38 [autoria] INFO: ✅ Phone extracted: (066) 598 15 39
+2026-01-14 23:59:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a4_37211804.html
+2026-01-14 23:59:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 23:59:57 [autoria] INFO: ✅ Phone extracted: (095) 887 76 77
+2026-01-14 23:59:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_tucson_39310361.html
+2026-01-15 00:00:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:00:19 [autoria] INFO: ✅ Phone extracted: (099) 200 83 94
+2026-01-15 00:00:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_ioniq_5_39019443.html
+2026-01-15 00:00:29 [scrapy.extensions.logstats] INFO: Crawled 528 pages (at 2 pages/min), scraped 477 items (at 3 items/min)
+2026-01-15 00:00:47 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:00:49 [autoria] INFO: ✅ Phone extracted: (073) 187 87 33
+2026-01-15 00:00:49 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_discovery_37920621.html
+2026-01-15 00:01:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:01:11 [autoria] INFO: ✅ Phone extracted: (096) 057 52 07
+2026-01-15 00:01:11 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_camry_39380220.html
+2026-01-15 00:01:29 [scrapy.extensions.logstats] INFO: Crawled 530 pages (at 2 pages/min), scraped 479 items (at 2 items/min)
+2026-01-15 00:01:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:01:56 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:01:59 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:01:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_a6_39380894.html
+2026-01-15 00:02:16 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:02:29 [scrapy.extensions.logstats] INFO: Crawled 532 pages (at 2 pages/min), scraped 480 items (at 1 items/min)
+2026-01-15 00:02:30 [autoria] INFO: ✅ Phone extracted: (096) 507 00 22
+2026-01-15 00:02:38 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_x_trail_38892994.html
+2026-01-15 00:03:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:03:26 [autoria] INFO: ✅ Phone extracted: (095) 888 00 70
+2026-01-15 00:03:26 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_39381406.html
+2026-01-15 00:03:29 [scrapy.extensions.logstats] INFO: Crawled 533 pages (at 1 pages/min), scraped 482 items (at 2 items/min)
+2026-01-15 00:03:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:03:40 [autoria] INFO: ✅ Phone extracted: (093) 123 19 19
+2026-01-15 00:03:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_tucson_39381405.html
+2026-01-15 00:04:29 [scrapy.extensions.logstats] INFO: Crawled 535 pages (at 2 pages/min), scraped 483 items (at 1 items/min)
+2026-01-15 00:04:34 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:04:36 [autoria] INFO: ✅ Phone extracted: (063) 682 19 81
+2026-01-15 00:04:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39034221.html
+2026-01-15 00:05:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:05:29 [scrapy.extensions.logstats] INFO: Crawled 536 pages (at 1 pages/min), scraped 484 items (at 1 items/min)
+2026-01-15 00:05:30 [autoria] INFO: ✅ Phone extracted: (068) 367 88 88
+2026-01-15 00:05:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39342090.html
+2026-01-15 00:06:04 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:06:06 [autoria] INFO: ✅ Phone extracted: (097) 475 56 77
+2026-01-15 00:06:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39381927.html
+2026-01-15 00:06:29 [scrapy.extensions.logstats] INFO: Crawled 538 pages (at 2 pages/min), scraped 486 items (at 2 items/min)
+2026-01-15 00:06:31 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:06:32 [autoria] INFO: ✅ Phone extracted: (063) 845 16 88
+2026-01-15 00:06:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_cayenne_39163348.html
+2026-01-15 00:07:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:07:16 [autoria] INFO: ✅ Phone extracted: (067) 639 15 13
+2026-01-15 00:07:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39382129.html
+2026-01-15 00:07:29 [scrapy.extensions.logstats] INFO: Crawled 539 pages (at 1 pages/min), scraped 488 items (at 2 items/min)
+2026-01-15 00:07:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:07:50 [autoria] INFO: ✅ Phone extracted: (067) 883 50 11
+2026-01-15 00:07:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_sprinter_39246460.html
+2026-01-15 00:08:29 [scrapy.extensions.logstats] INFO: Crawled 541 pages (at 2 pages/min), scraped 489 items (at 1 items/min)
+2026-01-15 00:08:35 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:08:37 [autoria] INFO: ✅ Phone extracted: (067) 231 29 50
+2026-01-15 00:08:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39256705.html
+2026-01-15 00:08:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:09:00 [autoria] INFO: ✅ Phone extracted: (099) 021 86 01
+2026-01-15 00:09:00 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39299648.html
+2026-01-15 00:09:08 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:09:09 [autoria] INFO: ✅ Phone extracted: (066) 511 05 70
+2026-01-15 00:09:10 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_polestar_2_39384329.html
+2026-01-15 00:09:29 [scrapy.extensions.logstats] INFO: Crawled 543 pages (at 2 pages/min), scraped 492 items (at 3 items/min)
+2026-01-15 00:10:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:10:03 [autoria] INFO: ✅ Phone extracted: (095) 817 53 00
+2026-01-15 00:10:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_5_series_39344816.html
+2026-01-15 00:10:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:10:14 [autoria] INFO: ✅ Phone extracted: (099) 613 67 77
+2026-01-15 00:10:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_39384720.html
+2026-01-15 00:10:29 [scrapy.extensions.logstats] INFO: Crawled 545 pages (at 2 pages/min), scraped 494 items (at 2 items/min)
+2026-01-15 00:10:46 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:11:01 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:11:04 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:11:04 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_x_trail_38764473.html
+2026-01-15 00:11:21 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:11:29 [scrapy.extensions.logstats] INFO: Crawled 547 pages (at 2 pages/min), scraped 495 items (at 1 items/min)
+2026-01-15 00:11:33 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:11:36 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:11:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_cadillac_lyriq_39308708.html
+2026-01-15 00:11:42 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:11:43 [autoria] INFO: ✅ Phone extracted: (073) 431 31 58
+2026-01-15 00:11:44 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_rav4_39381355.html
+2026-01-15 00:12:13 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:12:14 [autoria] INFO: ✅ Phone extracted: (097) 672 42 78
+2026-01-15 00:12:14 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_39169705.html
+2026-01-15 00:12:29 [scrapy.extensions.logstats] INFO: Crawled 549 pages (at 2 pages/min), scraped 498 items (at 3 items/min)
+2026-01-15 00:12:44 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:12:46 [autoria] INFO: ✅ Phone extracted: (098) 150 65 39
+2026-01-15 00:12:46 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_infiniti_qx50_39326775.html
+2026-01-15 00:13:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:13:29 [scrapy.extensions.logstats] INFO: Crawled 551 pages (at 2 pages/min), scraped 499 items (at 1 items/min)
+2026-01-15 00:13:30 [autoria] INFO: ✅ Phone extracted: (066) 974 23 32
+2026-01-15 00:13:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mitsubishi_outlander_39386862.html
+2026-01-15 00:13:39 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:13:41 [autoria] INFO: ✅ Phone extracted: (063) 524 59 88
+2026-01-15 00:13:41 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_y_39386866.html
+2026-01-15 00:14:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:14:13 [autoria] INFO: ✅ Phone extracted: (097) 480 49 59
+2026-01-15 00:14:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_polestar_2_39337128.html
+2026-01-15 00:14:29 [scrapy.extensions.logstats] INFO: Crawled 553 pages (at 2 pages/min), scraped 502 items (at 3 items/min)
+2026-01-15 00:14:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:14:50 [autoria] INFO: ✅ Phone extracted: (097) 945 55 02
+2026-01-15 00:14:51 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_32154792.html
+2026-01-15 00:15:02 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:15:04 [autoria] INFO: ✅ Phone extracted: (063) 742 70 89
+2026-01-15 00:15:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_corolla_39387277.html
+2026-01-15 00:15:29 [scrapy.extensions.logstats] INFO: Crawled 556 pages (at 3 pages/min), scraped 504 items (at 2 items/min)
+2026-01-15 00:15:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:15:31 [autoria] INFO: ✅ Phone extracted: (050) 886 64 21
+2026-01-15 00:15:31 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volkswagen_touareg_39298275.html
+2026-01-15 00:15:54 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:15:56 [autoria] INFO: ✅ Phone extracted: (093) 055 05 75
+2026-01-15 00:15:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x4_38769094.html
+2026-01-15 00:16:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:16:29 [scrapy.extensions.logstats] INFO: Crawled 558 pages (at 2 pages/min), scraped 506 items (at 2 items/min)
+2026-01-15 00:16:29 [autoria] INFO: ✅ Phone extracted: (063) 235 09 28
+2026-01-15 00:16:30 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_volvo_xc90_39387494.html
+2026-01-15 00:16:38 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:16:39 [autoria] INFO: ✅ Phone extracted: (050) 445 55 80
+2026-01-15 00:16:40 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_s_39331507.html
+2026-01-15 00:17:01 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:17:02 [autoria] INFO: ✅ Phone extracted: (068) 418 56 11
+2026-01-15 00:17:03 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_h_1_39194935.html
+2026-01-15 00:17:23 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:17:25 [autoria] INFO: ✅ Phone extracted: (093) 118 84 39
+2026-01-15 00:17:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_zeekr_7x_39298805.html
+2026-01-15 00:17:29 [scrapy.extensions.logstats] INFO: Crawled 561 pages (at 3 pages/min), scraped 510 items (at 4 items/min)
+2026-01-15 00:17:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:17:49 [autoria] INFO: ✅ Phone extracted: (097) 500 08 08
+2026-01-15 00:17:50 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_toyota_land_cruiser_39194378.html
+2026-01-15 00:18:18 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:18:19 [autoria] INFO: ✅ Phone extracted: (098) 540 55 00
+2026-01-15 00:18:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_38871750.html
+2026-01-15 00:18:29 [scrapy.extensions.logstats] INFO: Crawled 563 pages (at 2 pages/min), scraped 512 items (at 2 items/min)
+2026-01-15 00:18:40 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:18:52 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:18:55 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:18:56 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_vito_39353519.html
+2026-01-15 00:19:03 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:19:17 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:19:20 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:19:20 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39024671.html
+2026-01-15 00:19:29 [scrapy.extensions.logstats] INFO: Crawled 566 pages (at 3 pages/min), scraped 514 items (at 2 items/min)
+2026-01-15 00:19:29 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:19:44 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:19:47 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:19:48 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_tesla_model_3_38396122.html
+2026-01-15 00:19:55 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:19:57 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-15 00:19:58 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_cayenne_38840009.html
+2026-01-15 00:20:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:20:19 [autoria] INFO: ✅ Phone extracted: (098) 540 55 00
+2026-01-15 00:20:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q5_39135729.html
+2026-01-15 00:20:29 [scrapy.extensions.logstats] INFO: Crawled 568 pages (at 2 pages/min), scraped 517 items (at 3 items/min)
+2026-01-15 00:20:41 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:20:54 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:20:57 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:20:57 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q8_e_tron_39367959.html
+2026-01-15 00:21:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:21:15 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-15 00:21:15 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_39368240.html
+2026-01-15 00:21:24 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:21:25 [autoria] INFO: ✅ Phone extracted: (093) 274 38 54
+2026-01-15 00:21:25 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_ioniq_5_38805188.html
+2026-01-15 00:21:29 [scrapy.extensions.logstats] INFO: Crawled 571 pages (at 3 pages/min), scraped 520 items (at 3 items/min)
+2026-01-15 00:21:52 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:22:05 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:22:08 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:22:09 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39256724.html
+2026-01-15 00:22:22 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:22:23 [autoria] INFO: ✅ Phone extracted: (073) 038 77 77
+2026-01-15 00:22:24 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_zeekr_001_39283622.html
+2026-01-15 00:22:29 [scrapy.extensions.logstats] INFO: Crawled 573 pages (at 2 pages/min), scraped 522 items (at 2 items/min)
+2026-01-15 00:22:36 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:22:37 [autoria] INFO: ✅ Phone extracted: (093) 222 01 22
+2026-01-15 00:22:37 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_skoda_octavia_38975212.html
+2026-01-15 00:22:59 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:23:01 [autoria] INFO: ✅ Phone extracted: (050) 373 51 96
+2026-01-15 00:23:02 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_land_rover_range_rover_39252993.html
+2026-01-15 00:23:25 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:23:29 [scrapy.extensions.logstats] INFO: Crawled 576 pages (at 3 pages/min), scraped 524 items (at 2 items/min)
+2026-01-15 00:23:39 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:23:42 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:23:42 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_mercedes_benz_glc_class_39107555.html
+2026-01-15 00:23:48 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:24:03 [autoria] WARNING: ⚠️ Wait timed out: Page.wait_for_function: Timeout 10000ms exceeded. - Attempting fallback extraction
+2026-01-15 00:24:06 [autoria] WARNING: ⚠️ Could not extract phone number
+2026-01-15 00:24:06 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_e_tron_sportback_39180425.html
+2026-01-15 00:24:28 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:24:29 [scrapy.extensions.logstats] INFO: Crawled 578 pages (at 2 pages/min), scraped 526 items (at 2 items/min)
+2026-01-15 00:24:33 [autoria] INFO: ✅ Phone extracted: (073) 562 51 23
+2026-01-15 00:24:34 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_porsche_panamera_39327045.html
+2026-01-15 00:24:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:24:50 [autoria] INFO: ✅ Phone extracted: (095) 808 97 19
+2026-01-15 00:24:50 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_i4_36966883.html
+2026-01-15 00:25:14 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:25:16 [autoria] INFO: ✅ Phone extracted: (066) 427 79 02
+2026-01-15 00:25:16 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_renault_trafic_38515496.html
+2026-01-15 00:25:29 [scrapy.extensions.logstats] INFO: Crawled 581 pages (at 3 pages/min), scraped 529 items (at 3 items/min)
+2026-01-15 00:25:30 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:25:31 [autoria] INFO: ✅ Phone extracted: (098) 234 88 87
+2026-01-15 00:25:32 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_bmw_x5_33506254.html
+2026-01-15 00:26:10 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:26:12 [autoria] INFO: ✅ Phone extracted: (050) 333 32 66
+2026-01-15 00:26:13 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_hyundai_santa_fe_39331773.html
+2026-01-15 00:26:29 [scrapy.extensions.logstats] INFO: Crawled 583 pages (at 2 pages/min), scraped 531 items (at 2 items/min)
+2026-01-15 00:26:33 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:26:35 [autoria] INFO: ✅ Phone extracted: (093) 011 22 50
+2026-01-15 00:26:36 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_kia_niro_39281948.html
+2026-01-15 00:26:58 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:26:59 [autoria] INFO: ✅ Phone extracted: (075) 012 99 99
+2026-01-15 00:26:59 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_audi_q7_39218663.html
+2026-01-15 00:27:17 [autoria] INFO: ✅ Phone button clicked
+2026-01-15 00:27:19 [autoria] INFO: ✅ Phone extracted: (068) 215 11 11
+2026-01-15 00:27:19 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_rogue_39206807.html
+2026-01-15 00:27:29 [scrapy.extensions.logstats] INFO: Crawled 585 pages (at 2 pages/min), scraped 534 items (at 3 items/min)

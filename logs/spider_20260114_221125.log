@@ -1,0 +1,82 @@
+2026-01-14 22:11:26 [scrapy.utils.log] INFO: Scrapy 2.13.2 started (bot: scraper_autoria)
+2026-01-14 22:11:26 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.13.11 (main, Jan 13 2026, 03:12:43) [GCC 12.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36'}
+2026-01-14 22:11:26 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-01-14 22:11:26 [scrapy.extensions.telnet] INFO: Telnet Password: 898caf05c619a1d1
+2026-01-14 22:11:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-01-14 22:11:26 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'scraper_autoria',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/app/logs/spider_20260114_221125.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper_autoria.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper_autoria.spiders']}
+2026-01-14 22:11:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scraper_autoria.middlewares.ProxyMiddleware',
+ 'scraper_autoria.middlewares.ScrapeOpsFakeUserAgentMiddleware',
+ 'scraper_autoria.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scraper_autoria.middlewares.PlaywrightContextMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-01-14 22:11:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-01-14 22:11:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper_autoria.pipelines.PostgreSQLPipeline']
+2026-01-14 22:11:27 [scrapy.core.engine] INFO: Spider opened
+2026-01-14 22:11:27 [autoria] INFO: ✅ Table cars існує (init.sql відпрацював)
+2026-01-14 22:11:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-01-14 22:11:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-01-14 22:11:27 [scrapy-playwright] INFO: Starting download handler
+2026-01-14 22:11:27 [scrapy-playwright] INFO: Starting download handler
+2026-01-14 22:11:33 [scrapy-playwright] INFO: Launching browser firefox
+2026-01-14 22:11:34 [scrapy-playwright] INFO: Browser firefox launched
+2026-01-14 22:11:48 [autoria] INFO: ✅ Cookie banner closed
+2026-01-14 22:11:49 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:11:50 [autoria] INFO: ✅ Phone extracted: (067) 950 96 07
+2026-01-14 22:11:50 [autoria] INFO: 📝 Updated [ID:80]: https://auto.ria.com/uk/auto_chevrolet_camaro_39294744.html
+2026-01-14 22:12:06 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:12:07 [autoria] INFO: ✅ Phone extracted: (067) 849 10 30
+2026-01-14 22:12:07 [autoria] INFO: 📝 Updated [ID:106]: https://auto.ria.com/uk/auto_renault_master_39227536.html
+2026-01-14 22:12:12 [autoria] INFO: ✅ Phone button clicked
+2026-01-14 22:12:16 [autoria] INFO: ✅ Phone extracted: (098) 719 16 15
+2026-01-14 22:12:18 [autoria] INFO: ✅ Inserted [NEW]: https://auto.ria.com/uk/auto_nissan_qashqai_2_39387150.html
+2026-01-14 22:12:27 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 7 pages/min), scraped 3 items (at 3 items/min)
+2026-01-14 22:12:36 [autoria] INFO: ✅ Phone button clicked
