@@ -1,0 +1,5 @@
+./scraper_autoria/prevVersionsSpider
+.scrapy
+venv
+logs/scrapy.log
+.gitignore

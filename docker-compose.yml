@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: postgres:13
+    container_name: autoria_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - autoria_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  scrapy_app:
+    build: .
+    container_name: autoria_scrapy
+    # 👇 ВАЖЛИВО: підключаємо файли з хоста всередину
+    volumes:
+      - ./:/app
+    ports:
+      - "2222:22"  # 👈 SSH доступ для PyCharm (localhost:2222)
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      - POSTGRES_HOST=postgres
+      - DOCKER_ENV=true
+      - TZ=Europe/Warsaw
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - autoria_network
+    restart: unless-stopped
+    # TTY потрібен для коректної роботи деяких процесів
+    tty: true 
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: autoria_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - autoria_network
+
+volumes:
+  postgres_data:
+
+networks:
+  autoria_network:
+    driver: bridge
