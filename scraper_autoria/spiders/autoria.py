@@ -1,9 +1,14 @@
+from typing import Any, Self
+
 from playwright.async_api import Page, expect
+from scrapy.crawler import Crawler
 from scrapy.loader import ItemLoader
 from ..items import ScraperAutoriaItem
-import os, scrapy, re
-import asyncio
+import scrapy, os, re, redis, psycopg2
 from scrapy.selector import Selector
+from scrapy import signals
+from twisted.internet.error import DNSLookupError, TCPTimedOutError
+from scrapy.spidermiddlewares.httperror import HttpError
 
 class AutoriaSpider(scrapy.Spider):
     name = "autoria"
@@ -14,6 +19,38 @@ class AutoriaSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.loop = None
+        self.redis_available = True  # Assume Redis is available by default
+        self.r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True, socket_connect_timeout=5)
+
+    @classmethod
+    def from_crawler(cls, crawler: Crawler, *args: Any, **kwargs: Any) -> Self:
+        spider = super(AutoriaSpider, cls).from_crawler(crawler,*args,**kwargs)
+        crawler.signals.connect(spider.spider_opened, signal=signals.spider_opened)
+        return spider
+
+    def spider_opened(self, spider):
+        self.logger.info("Sync Redis with PostgreSQL...")
+        try:
+            conn = psycopg2.connect(os.getenv("DATABASE_URL"))
+            cur = conn.cursor()
+            cur.execute("SELECT url FROM car_products")
+            pipe = self.r.pipeline()
+            for row in cur:
+                pipe.sadd("scraped_urls", row[0])
+            pipe.execute()
+            self.logger.info("Sync completed successfully!!!")
+        except redis.ConnectionError as e:
+            self.logger.error(f"Failed to connect to Redis {e}")
+            self.redis_available = False
+        except Exception as e:
+            self.logger.error(f"Error during Redis sync: {e}")
+            self.redis_available = False
+        finally:
+            try:
+                cur.close()
+                conn.close()
+            except:
+                pass
 
     async def start(self):
         for url in self.start_urls:
@@ -25,13 +62,20 @@ class AutoriaSpider(scrapy.Spider):
 
     def parse(self, response, **kwargs):
         cars = response.css('section.ticket-item')
-
         for car in cars: # прохід по сторінкам оголошень
             car_url = car.css('a.m-link-ticket::attr(href), a.address::attr(href)').get()
-
             if car_url and not car_url.strip().startswith(('javascript', '#')):
                 if 'newauto' in car_url.lower():
                     continue
+
+
+                try:
+                    if self.r.sismember("scraped_urls", car_url):
+                        self.logger.info(f"Skipping {car_url}, already in DB")
+                        continue
+                except redis.RedisError as e:
+                    self.logger.error(f"Redis error: {e}. Continuing without URL deduplication.")
+                    self.redis_available = False
 
                 yield response.follow(
                     car_url,
@@ -46,13 +90,13 @@ class AutoriaSpider(scrapy.Spider):
                         },
                     }
                 )
-
         # Pagination (unchanged)
         next_page = response.css('a.js-next.page-link::attr(href), a.page-link.js-next::attr(href)').get()
         # page_num = 1
         # next_page = response.url + "&page=" + str(page_num)
         if next_page:
-            yield response.follow(next_page, callback=self.parse) # перехід на наступну сторінку через отримання посилання з кнопки
+            self.logger.info(f"Moving to next page: {next_page}")
+            yield response.follow(next_page, callback=self.parse, meta={"playwright":True}) # перехід на наступну сторінку через отримання посилання з кнопки
         else:
             self.logger.info(f"HTTP STATUS (trying to reach next page): {response.status}")
             self.logger.info(f"HEADERS: {response.headers.to_unicode_dict()}")

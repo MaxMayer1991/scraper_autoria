@@ -18,7 +18,7 @@ SPIDER_TIME = os.getenv('SPIDER_TIME')
 DUMP_TIME = os.getenv('DUMP_TIME')
 DUMP_DIR = os.path.join(BASE_DIR, 'dumps')
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
-# Створюємо папку для дампів, якщо немає
+# Створюємо теку для DUMPS, якщо немає
 os.makedirs(DUMP_DIR, exist_ok=True)
 
 
@@ -43,7 +43,7 @@ def run_spider():
 
 
 def dump_db():
-    """Створення бекапу бази даних PostgreSQL"""
+    """Створення backup бази даних PostgreSQL"""
     print(f"[{datetime.now()}] 💾 Creating database dump...")
 
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')

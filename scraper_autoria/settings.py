@@ -63,7 +63,7 @@ SCRAPEOPS_NUM_RESULTS = 5
 PLAYWRIGHT_MAX_CONTEXTS = 4
 PLAYWRIGHT_MAX_PAGES_PER_CONTEXT = 4
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 6
@@ -71,7 +71,7 @@ CONCURRENT_REQUESTS = 6
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 3
 DOWNLOAD_TIMEOUT = 30
 RETRY_TIMES = 3
 RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429, 403]

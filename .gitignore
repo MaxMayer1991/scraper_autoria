@@ -1,6 +1,7 @@
-./scraper_autoria/prevVersionsSpider/
 venv
 .scrapy
 __pycache__
-logs/scrapy.log
+logs
 .env
+API.py
+dumps
