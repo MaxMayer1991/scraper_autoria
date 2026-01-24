@@ -59,14 +59,14 @@ PROXY_URL = os.getenv('PROXY_URL')
 # SCRAPEOPS_PROXY_ENABLED = True
 # SCRAPEOPS_PROXY_SETTINGS = {'country': 'ua'}
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
-SCRAPEOPS_NUM_RESULTS = 5
-PLAYWRIGHT_MAX_CONTEXTS = 4
-PLAYWRIGHT_MAX_PAGES_PER_CONTEXT = 4
+SCRAPEOPS_NUM_RESULTS = 10
+PLAYWRIGHT_MAX_CONTEXTS = 8
+PLAYWRIGHT_MAX_PAGES_PER_CONTEXT = 8
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 6
+CONCURRENT_REQUESTS = 16
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -126,7 +126,7 @@ logging.getLogger('playwright').setLevel(logging.WARNING)
 logging.getLogger('asyncio').setLevel(logging.WARNING)
 
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 4
+CONCURRENT_REQUESTS_PER_DOMAIN = 16
 CONCURRENT_REQUESTS_PER_IP = 1
 
 COOKIES_ENABLED = False

@@ -27,6 +27,5 @@ RUN playwright install-deps
 
 COPY . .
 
-EXPOSE 22
-
-CMD service ssh start && python3 scheduler.py
+EXPOSE 8000
+CMD ["uvicorn", "API:app", "--host", "0.0.0.0", "--port", "8000"]

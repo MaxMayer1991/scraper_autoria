@@ -20,8 +20,10 @@ class AutoriaSpider(scrapy.Spider):
         super().__init__(*args, **kwargs)
         self.loop = None
         self.redis_available = True  # Assume Redis is available by default
-        self.r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True, socket_connect_timeout=5)
-
+        try:
+            self.r = redis.Redis(host=os.getenv('REDIS_HOST', "localhost"), port=6379, db=0, decode_responses=True, socket_connect_timeout=5)
+        except Exception as e:
+            self.r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True, socket_connect_timeout=5)
     @classmethod
     def from_crawler(cls, crawler: Crawler, *args: Any, **kwargs: Any) -> Self:
         spider = super(AutoriaSpider, cls).from_crawler(crawler,*args,**kwargs)

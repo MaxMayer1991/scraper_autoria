@@ -21,7 +21,7 @@ class PostgreSQLPipeline:
     TABLE_NAME = "car_products"
 
     def __init__(self, database_url: str, crawler=None):
-        self.database_url = database_url
+        self.database_url = os.getenv("DATABASE_URL")
         self.conn = None
         self.cur = None
         self.crawler = crawler
